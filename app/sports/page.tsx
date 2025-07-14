@@ -67,7 +67,7 @@ export default function SportsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black">
       <Navbar data={siteData.navbar} />
       <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} />
       <SearchFilter breakingNews={siteData.breakingNews} />
