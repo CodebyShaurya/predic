@@ -12,7 +12,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
   const [selectedNews, setSelectedNews] = useState<string | null>(null);
 
   return (
-    <div className="bg-gray-900 border-b border-gray-800">
+    <div className="bg-black border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
           {/* Filter and Bookmarks */}
@@ -23,7 +23,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
               className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800"
             >
               <Filter className="h-4 w-4 mr-2" />
-              Filter
+              
             </Button>
             <Button
               variant="outline"
@@ -31,7 +31,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
               className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800"
             >
               <Bookmark className="h-4 w-4 mr-2" />
-              Bookmarks
+              
             </Button>
           </div>
 

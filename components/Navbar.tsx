@@ -22,7 +22,7 @@ export default function Navbar({ data }: NavbarProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <nav className="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <nav className="bg-black border-b border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Search */}
@@ -42,7 +42,7 @@ export default function Navbar({ data }: NavbarProps) {
                 placeholder={data.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 w-60 bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
+                className="pl-10 pr-4 py-2 w-60 bg-black border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
           </div>

@@ -34,7 +34,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
     }
   };
   return (
-    <div className="bg-gray-900 border-b border-gray-800">
+    <div className="bg-black border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-1 py-3 overflow-x-auto">
           {visibleTabs.map((tab) => (

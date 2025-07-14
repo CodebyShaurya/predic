@@ -151,7 +151,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black">
       <Navbar data={siteData.navbar} />
       <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} currentTab="Trending" />
       <SearchFilter breakingNews={siteData.breakingNews} />
