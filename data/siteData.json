@@ -1,0 +1,268 @@
+{
+  "navbar": {
+    "logo": "Predictas",
+    "searchPlaceholder": "Search predictions...",
+    "howItWorks": "How it works",
+    "auth": {
+      "login": "Log in",
+      "signup": "Sign up"
+    }
+  },
+  "tabs": [
+    "Trending",
+    "News",
+    "Politics",
+    "Middle East",
+    "Sports",
+    "Crypto",
+    "Tech",
+    "Culture",
+    "Word Mentions",
+    "Economy",
+    "Election"
+  ],
+  "moreDropdown": [
+    "Entertainment",
+    "Science",
+    "Health",
+    "Environment",
+    "Business"
+  ],
+  "breakingNews": [
+    "Trump Epstein",
+    "Trump vs Elon",
+    "Educational Trade war",
+    "AI Regulation",
+    "Climate Summit"
+  ],
+  "predictions": [
+    {
+      "id": 1,
+      "type": "list",
+      "image": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "title": "2024 Presidential Election Winner",
+      "volume": "$20m",
+      "options": [
+        {
+          "name": "Joe Biden",
+          "percentage": 45
+        },
+        {
+          "name": "Donald Trump",
+          "percentage": 38
+        },
+        {
+          "name": "Other Candidate",
+          "percentage": 17
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "binary",
+      "image": "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "title": "Will Bitcoin reach $100k by end of 2024?",
+      "percentage": 67,
+      "volume": "$15m",
+      "yesPrice": "$0.67",
+      "noPrice": "$0.33"
+    },
+    {
+      "id": 3,
+      "type": "list",
+      "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "title": "Next Tech Giant to Reach $5T Market Cap",
+      "volume": "$8m",
+      "options": [
+        {
+          "name": "Apple",
+          "percentage": 42
+        },
+        {
+          "name": "Microsoft",
+          "percentage": 35
+        },
+        {
+          "name": "NVIDIA",
+          "percentage": 23
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "binary",
+      "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "title": "Will there be a recession in 2024?",
+      "percentage": 34,
+      "volume": "$12m",
+      "yesPrice": "$0.34",
+      "noPrice": "$0.66"
+    }
+  ],
+  "sports": {
+    "topBoxes": [
+      {
+        "id": 1,
+        "time": "2h 15m",
+        "price": "$1.45",
+        "volume": "$2.3M"
+      },
+      {
+        "id": 2,
+        "time": "4h 30m",
+        "price": "$2.10",
+        "volume": "$1.8M"
+      },
+      {
+        "id": 3,
+        "time": "1h 45m",
+        "price": "$3.25",
+        "volume": "$950K"
+      }
+    ],
+    "companies": [
+      {
+        "name": "DraftKings",
+        "price": "$45.20",
+        "change": "+2.5%"
+      },
+      {
+        "name": "FanDuel",
+        "price": "$38.75",
+        "change": "-1.2%"
+      }
+    ],
+    "sidebar": {
+      "categories": ["Live", "Soon", "Futures"],
+      "leagues": [
+        {
+          "name": "Premier League",
+          "logo": "⚽",
+          "startDate": "Dec 15, 2024"
+        },
+        {
+          "name": "La Liga",
+          "logo": "⚽",
+          "startDate": "Dec 16, 2024"
+        },
+        {
+          "name": "Bundesliga",
+          "logo": "⚽",
+          "startDate": "Dec 17, 2024"
+        }
+      ]
+    },
+    "nbaMatches": [
+      {
+        "id": 1,
+        "homeTeam": {
+          "name": "Lakers",
+          "short": "LAL",
+          "color": "bg-purple-600",
+          "stats": "45-20",
+          "bid": "$1.85"
+        },
+        "awayTeam": {
+          "name": "Warriors",
+          "short": "GSW",
+          "color": "bg-blue-600",
+          "stats": "42-23",
+          "bid": "$2.15"
+        },
+        "timer": "2h 30m",
+        "money": "$5.2M"
+      },
+      {
+        "id": 2,
+        "homeTeam": {
+          "name": "Celtics",
+          "short": "BOS",
+          "color": "bg-green-600",
+          "stats": "48-17",
+          "bid": "$1.65"
+        },
+        "awayTeam": {
+          "name": "Heat",
+          "short": "MIA",
+          "color": "bg-red-600",
+          "stats": "38-27",
+          "bid": "$2.35"
+        },
+        "timer": "4h 15m",
+        "money": "$3.8M"
+      },
+      {
+        "id": 3,
+        "homeTeam": {
+          "name": "Nets",
+          "short": "BKN",
+          "color": "bg-gray-600",
+          "stats": "35-30",
+          "bid": "$1.95"
+        },
+        "awayTeam": {
+          "name": "Knicks",
+          "short": "NYK",
+          "color": "bg-orange-600",
+          "stats": "40-25",
+          "bid": "$1.85"
+        },
+        "timer": "6h 45m",
+        "money": "$2.1M"
+      }
+    ],
+    "teamMatchups": [
+      {
+        "id": 1,
+        "homeTeam": {
+          "name": "Lakers",
+          "short": "LAL",
+          "color": "bg-purple-600",
+          "price": "$1.85"
+        },
+        "awayTeam": {
+          "name": "Warriors",
+          "short": "GSW",
+          "color": "bg-blue-600",
+          "price": "$2.15"
+        }
+      },
+      {
+        "id": 2,
+        "homeTeam": {
+          "name": "Celtics",
+          "short": "BOS",
+          "color": "bg-green-600",
+          "price": "$1.65"
+        },
+        "awayTeam": {
+          "name": "Heat",
+          "short": "MIA",
+          "color": "bg-red-600",
+          "price": "$2.35"
+        }
+      }
+    ]
+    ,
+    "selectedGame": {
+      "name": "Lakers vs Warriors",
+      "teams": ["Lakers", "Warriors"],
+      "homeTeam": {
+        "name": "Lakers",
+        "short": "LAL",
+        "bid": "$1.85"
+      },
+      "awayTeam": {
+        "name": "Warriors",
+        "short": "GSW",
+        "bid": "$2.15"
+      },
+      "amount": "$2,500",
+      "tradeSuggestions": [
+        "Buy Lakers at current odds",
+        "Hedge with Warriors spread",
+        "Consider over/under 220.5"
+      ]
+    }
+  }
+}
