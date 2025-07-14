@@ -153,13 +153,13 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
             className="flex-1 bg-green-600 hover:bg-green-700 text-white"
             size="sm"
           >
-            Buy Yes {prediction.yesPrice}
+            Buy Yes 
           </Button>
           <Button
             className="flex-1 bg-red-600 hover:bg-red-700 text-white"
             size="sm"
           >
-            Buy No {prediction.noPrice}
+            Buy No
           </Button>
         </div>
       </CardContent>
