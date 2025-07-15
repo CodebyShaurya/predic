@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Gift, Bookmark, TrendingUp, TrendingDown } from 'lucide-react';
+import { Gift, Bookmark, TrendingUp, ArrowLeftRight , ChevronsUp} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -30,7 +30,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
 
   if (prediction.type === 'list') {
     return (
-      <Card className="bg-gray-800 border-gray-700 hover:bg-gray-750 transition-colors">
+      <Card className="bg-[#1E1E1E] border-gray-700 hover:bg-gray-750 transition-colors">
         <CardHeader className="pb-3">
           <div className="flex items-start space-x-3">
             <img
@@ -38,8 +38,8 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
               alt={prediction.title}
               className="w-16 h-16 rounded-lg object-cover"
             />
-            <div className="flex-1">
-              <h3 className="text-white font-semibold text-sm leading-tight">
+            <div className="flex-1 mt-3">
+              <h3 className="text-white font-semibold text-lg leading-tight">
                 {prediction.title}
               </h3>
             </div>
@@ -50,21 +50,21 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
           <div className="space-y-3">
             {prediction.options?.map((option, index) => (
               <div key={index} className="flex items-center justify-between">
-                <span className="text-gray-300 text-sm">{option.name}</span>
+                <span className="text-gray-300 text-md">{option.name}</span>
                 <div className="flex items-center space-x-2">
                   <span className="text-white font-medium">{option.percentage}%</span>
                   <div className="flex space-x-1">
                     <Button
                       size="sm"
                       variant="outline"
-                      className="h-6 px-2 bg-green-600 hover:bg-green-700 border-green-600 text-white text-xs"
+                      className="h-6 px-2 bg-green-200 bg-opacity-10 hover:bg-green-700 text-xl text-green-400 text-xs"
                     >
                       Yes
                     </Button>
                     <Button
                       size="sm"
                       variant="outline"
-                      className="h-6 px-2 bg-red-600 hover:bg-red-700 border-red-600 text-white text-xs"
+                      className="h-6 px-2 bg-red-200 bg-opacity-10 hover:bg-red-700 text-xl text-red-400 text-xs"
                     >
                       No
                     </Button>
@@ -76,14 +76,14 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
         </CardContent>
 
         <CardFooter className="flex justify-between items-center pt-3">
-          <span className="text-gray-400 text-sm font-medium">{prediction.volume} Vol</span>
+          <span className="text-gray-200 text-lg font-medium flex items-center space-x-2">{prediction.volume} Vol    </span>
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
               size="sm"
               className="h-8 w-8 p-0 text-gray-400 hover:text-white"
             >
-              <Gift className="h-4 w-4" />
+              <Gift className="h-10 w-10" />
             </Button>
             <Button
               variant="ghost"
@@ -93,7 +93,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
                 bookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-white'
               }`}
             >
-              <Bookmark className="h-4 w-4" fill={bookmarked ? 'currentColor' : 'none'} />
+              <Bookmark className="h-10 w-10" fill={bookmarked ? 'currentColor' : 'none'} />
             </Button>
           </div>
         </CardFooter>
@@ -103,7 +103,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
 
   // Binary prediction card
   return (
-    <Card className="bg-gray-800 border-gray-700 hover:bg-gray-750 transition-colors">
+    <Card className="bg-[#1E1E1E] border-gray-700 hover:bg-gray-750 transition-colors">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex items-start space-x-3">
@@ -113,7 +113,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
               className="w-16 h-16 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <h3 className="text-white font-semibold text-sm leading-tight">
+              <h3 className="text-white font-semibold text-lg leading-tight mr-10 mt-3">
                 {prediction.title}
               </h3>
             </div>
@@ -147,32 +147,32 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
         </div>
       </CardHeader>
       
-      <CardContent className="py-2">
+      <CardContent className="py-2 mt-5">
         <div className="flex space-x-2">
           <Button
-            className="flex-1 bg-green-600 hover:bg-green-700 text-white"
+            className="flex-1 bg-green-200 bg-opacity-10 hover:bg-green-700 text-xl text-green-400 h-16"
             size="sm"
           >
-            Buy Yes 
+            Buy Yes <ChevronsUp className='h-8 w-8' />
           </Button>
           <Button
-            className="flex-1 bg-red-600 hover:bg-red-700 text-white"
+            className="flex-1 bg-red-200 bg-opacity-10 hover:bg-red-700 text-xl text-red-400 h-16"
             size="sm"
           >
-            Buy No
+            Buy No <ChevronsUp className='h-8 w-8' />
           </Button>
         </div>
       </CardContent>
 
       <CardFooter className="flex justify-between items-center pt-3">
-        <span className="text-gray-400 text-sm font-medium">{prediction.volume} Vol</span>
+        <span className="text-gray-200 text-lg font-medium flex items-center space-x-2">{prediction.volume} Vol <ArrowLeftRight className='ml-2 h-6 w-6' />    </span>
         <div className="flex items-center space-x-2">
           <Button
             variant="ghost"
             size="sm"
             className="h-8 w-8 p-0 text-gray-400 hover:text-white"
           >
-            <Gift className="h-4 w-4" />
+            <Gift className="h-10 w-10" />
           </Button>
           <Button
             variant="ghost"
@@ -182,7 +182,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
               bookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-white'
             }`}
           >
-            <Bookmark className="h-4 w-4" fill={bookmarked ? 'currentColor' : 'none'} />
+            <Bookmark className="h-10 w-10" fill={bookmarked ? 'currentColor' : 'none'} />
           </Button>
         </div>
       </CardFooter>

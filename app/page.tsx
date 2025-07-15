@@ -136,7 +136,7 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-[#101010]  flex items-center justify-center">
         <div className="text-white text-xl">Loading...</div>
       </div>
     );
@@ -144,14 +144,14 @@ export default function Home() {
 
   if (!siteData) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-[#101010] flex items-center justify-center">
         <div className="text-white text-xl">Error loading data</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-[#101010]">
       <Navbar data={siteData.navbar} />
       <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} currentTab="Trending" />
       <SearchFilter breakingNews={siteData.breakingNews} />
