@@ -1,9 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 interface NavbarProps {
   data: {
@@ -15,14 +21,18 @@ interface NavbarProps {
       signup: string;
     };
   };
+  tabs?: string[];
+  moreDropdown?: string[];
 }
 
-export default function Navbar({ data }: NavbarProps) {
+export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
+  const allTabs = [...tabs, ...moreDropdown];
+
   return (
-    <nav className="bg-black border-b border-gray-700 sticky top-0 z-50">
+    <nav className="bg-[#1B1B1B] border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Search */}
@@ -39,10 +49,10 @@ export default function Navbar({ data }: NavbarProps) {
               </div>
               <Input
                 type="text"
-                placeholder={data.searchPlaceholder}
+                placeholder={"Search News"}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 w-60 bg-black border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
+                className="pl-10 pr-4 py-2 w-60 bg-[#1B1B1B] border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
           </div>
@@ -56,6 +66,23 @@ export default function Navbar({ data }: NavbarProps) {
 
           {/* Right - Auth buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
+                  Categories <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-gray-800 border-gray-700 max-h-60 overflow-y-auto">
+                {allTabs.map((tab) => (
+                  <DropdownMenuItem
+                    key={tab}
+                    className="text-gray-300 hover:text-white hover:bg-gray-700"
+                  >
+                    {tab}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
               {data.auth.login}
             </Button>
@@ -93,6 +120,23 @@ export default function Navbar({ data }: NavbarProps) {
                   className="pl-10 pr-4 py-2 w-full bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                 />
               </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">
+                    Categories <ChevronDown className="ml-1 h-4 w-4 inline" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-gray-800 border-gray-700 max-h-60 overflow-y-auto w-full">
+                  {allTabs.map((tab) => (
+                    <DropdownMenuItem
+                      key={tab}
+                      className="text-gray-300 hover:text-white hover:bg-gray-700"
+                    >
+                      {tab}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               <button className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">
                 {data.howItWorks}
               </button>
