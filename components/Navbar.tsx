@@ -55,24 +55,48 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                 className="pl-10 pr-4 py-2 w-60 bg-[#1B1B1B] border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
-          </div>
-
-          {/* Center - How it works */}
-          <div className="hidden md:block">
+            <div className="hidden md:block">
             <button className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
               {data.howItWorks}
             </button>
           </div>
+          </div>
+
+          {/* Center - How it works */}
+          
 
           {/* Right - Auth buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <DropdownMenu>
+            
+            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
+              {data.auth.login}
+            </Button>
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+              {data.auth.signup}
+            </Button>
+
+            <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+          <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
-                  Categories <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
+              <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-gray-800 border-gray-700 max-h-60 overflow-y-auto">
+              <DropdownMenuContent className="bg-[#1B1B1B] border-gray-700 max-h-60 overflow-y-auto">
                 {allTabs.map((tab) => (
                   <DropdownMenuItem
                     key={tab}
@@ -83,25 +107,10 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
-              {data.auth.login}
-            </Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white">
-              {data.auth.signup}
-            </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+          
         </div>
 
         {/* Mobile menu */}

@@ -82,7 +82,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
                     key={news}
                     variant="ghost"
                     size="sm"
-                    className="whitespace-nowrap text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+                    className="whitespace-nowrap text-sm text-gray-300 hover:text-white hover:bg-[#101010]"
                   >
                     {news}
                   </Button>
@@ -95,7 +95,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
                     key={news}
                     variant="ghost"
                     size="sm"
-                    className="whitespace-nowrap text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+                    className="whitespace-nowrap text-sm text-gray-300 hover:text-white hover:bg-[#101010]"
                   >
                     {news}
                   </Button>
@@ -105,7 +105,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-gray-300 hover:text-white hover:bg-gray-800 flex items-center"
+                      className="text-gray-300 hover:text-white  flex items-center"
                       onClick={() => setShowMore((prev) => !prev)}
                     >
                       More <ChevronDown className="ml-1 h-4 w-4" />
@@ -118,7 +118,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
                             variant="ghost"
                             size="sm"
                             onClick={() => setShowMore(false)}
-                            className="w-full justify-start text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+                            className="w-full justify-start text-sm text-gray-300 hover:text-white hover:bg-[#101010]"
                           >
                             {news}
                           </Button>
@@ -149,7 +149,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
                       variant="ghost"
                       size="sm"
                       onClick={() => setShowMore(false)}
-                      className="w-full justify-start text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+                      className="w-full justify-start text-sm text-gray-300 hover:text-white hover:bg-[#101010]"
                     >
                       {news}
                     </Button>

@@ -113,7 +113,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
               className="w-16 h-16 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <h3 className="text-white font-semibold text-lg leading-tight mr-10 mt-3">
+              <h3 className="text-white font-semibold text-lg leading-tight 2xl:mr-0 mr-10 mt-3">
                 {prediction.title}
               </h3>
             </div>

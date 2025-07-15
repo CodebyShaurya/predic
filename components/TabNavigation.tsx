@@ -57,15 +57,15 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
         {/* Mobile: Only Trending, News, More */}
         <div className="flex items-center space-x-1 py-3 lg:hidden overflow-x-auto scrollbar-hide">
           <Button
-            // variant={activeTab === 'Trending' ? 'default' : 'ghost'}
+            variant={'ghost'}
             size="sm"
             onClick={() => handleTabClick('Trending')}
             className={`whitespace-nowrap ${activeTab === 'Trending' ? 'text-white' : 'text-gray-300'}`}
           >
-            <TrendingIcon /> Trending
+            Trending <TrendingUp className='ml-1 h-5 w-5' /> 
           </Button>
           <Button
-            // variant={activeTab === 'News' ? 'default' : 'ghost'}
+            variant={'ghost'}
             size="sm"
             onClick={() => handleTabClick('News')}
             className={`whitespace-nowrap ${activeTab === 'News' ? 'text-white' : 'text-gray-300'}`}
@@ -113,7 +113,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
                   onClick={() => handleTabClick('Trending')}
                   className={`whitespace-nowrap ${activeTab === 'Trending' ? 'text-white' : 'text-gray-300'}`}
                 >
-                  Trending <TrendingUp className='ml-1 ' /> 
+                  Trending <TrendingUp className='ml-1 h-5 w-5' /> 
                 </Button>
                 <Button
                   variant={ 'ghost'}
