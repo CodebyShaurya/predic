@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Menu, X, ChevronDown } from 'lucide-react';
+import { Search, Menu, X, ChevronDown, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import Image from 'next/image';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,14 +34,15 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
 
   return (
     <nav className="bg-[#1B1B1B] border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-[5%] px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Search */}
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                {data.logo}
-              </h1>
+              <a href="/" className="text-2xl font-bold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                {/* {data.logo} */}
+                <Image src="/logo.png" alt="logo" width={200} height={32} />
+              </a>
             </div>
             
             <div className="relative hidden md:block">
@@ -56,8 +58,9 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
               />
             </div>
             <div className="hidden md:block">
-            <button className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              {data.howItWorks}
+            <button className="text-[#7371FF] hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-2">
+            {/* Info */}
+               <Info className='h-6 w-6 bg-[#7371FF] rounded-full  text-[#1B1B1B] mr-1' />{data.howItWorks}
             </button>
           </div>
           </div>
@@ -68,10 +71,10 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
           {/* Right - Auth buttons */}
           <div className="hidden md:flex items-center space-x-4">
             
-            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
+            <Button variant="ghost" className="text-[#7371FF] hover:text-white hover:bg-[#1B1B1B]">
               {data.auth.login}
             </Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+            <Button className="bg-gradient-to-br from-violet-600 to-indigo-600 hover:bg-purple-700 text-white ">
               {data.auth.signup}
             </Button>
 
