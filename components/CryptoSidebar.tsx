@@ -20,10 +20,10 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
   const [activeCurrency, setActiveCurrency] = useState<string | null>(null);
 
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 h-fit">
+    <div className="bg-[#1E1E1E] border border-gray-700 rounded-lg p-4 h-fit">
       {/* Timeframes */}
       <div className="mb-6">
-        <h3 className="text-white font-semibold mb-3">Timeframes</h3>
+        {/* <h3 className="text-white font-semibold mb-3">Timeframes</h3> */}
         <div className="space-y-2">
           {timeframes.map((timeframe) => (
             <Button
@@ -33,7 +33,7 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
               onClick={() => setActiveTimeframe(timeframe)}
               className={`w-full justify-start ${
                 activeTimeframe === timeframe
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'bg-gray-800 text-white hover:bg-gray-800'
                   : 'text-gray-300 hover:text-white hover:bg-gray-700'
               }`}
             >
@@ -55,7 +55,7 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
               onClick={() => setActiveCurrency(currency.symbol)}
               className={`w-full justify-between p-3 h-auto ${
                 activeCurrency === currency.symbol
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'bg-gray-700 text-white hover:bg-gray-700'
                   : 'text-gray-300 hover:text-white hover:bg-gray-700'
               }`}
             >

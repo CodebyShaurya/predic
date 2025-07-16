@@ -57,7 +57,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                 className="pl-10 pr-4 py-2 w-60 bg-[#1B1B1B] border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
             <button className="text-[#7371FF] hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-2">
             {/* Info */}
                <Info className='h-6 w-6 bg-[#7371FF] rounded-full  text-[#1B1B1B] mr-1' />{data.howItWorks}

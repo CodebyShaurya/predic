@@ -10,7 +10,7 @@
   },
   "crypto": {
     "sidebar": {
-      "timeframes": ["All", "Hourly", "Daily", "Weekly", "Monthly"],
+      "timeframes": ["Live/Soon", "Hourly", "Daily", "Weekly", "Monthly"],
       "currencies": [
         {
           "name": "Bitcoin",

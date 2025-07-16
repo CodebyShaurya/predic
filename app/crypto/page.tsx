@@ -57,15 +57,15 @@ export default function CryptoPage() {
         moreDropdown={siteData.moreDropdown} 
         currentTab="Crypto" 
       />
-      <SearchFilter breakingNews={siteData.breakingNews} />
+      {/* <SearchFilter breakingNews={siteData.breakingNews} /> */}
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-6">
+      <main className="  py-8">
+        <div className="mb-6 px-4 sm:px-6 lg:px-8">
           <h1 className="text-white text-2xl font-bold mb-2">Crypto Predictions</h1>
           <p className="text-gray-400">Trade on cryptocurrency price movements and market events</p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 ">
           <div className="lg:col-span-1">
             <CryptoSidebar
               timeframes={siteData.crypto.sidebar.timeframes}
@@ -73,7 +73,7 @@ export default function CryptoPage() {
             />
           </div>
           
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 pr-4 sm:pr-6 lg:pr-8">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {siteData.crypto.predictions.map((prediction: any) => (
                 <PredictionCard key={prediction.id} prediction={prediction} />
