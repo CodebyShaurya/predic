@@ -10,7 +10,33 @@
   },
   "crypto": {
     "sidebar": {
-      "timeframes": ["Live/Soon", "Hourly", "Daily", "Weekly", "Monthly"],
+      "timeframes": [
+        {
+        "name": "Live/Soon",
+        "symbol": "Live/Soon",
+        "amount": "23",
+        "logo": "🔥"
+      },
+      {
+        "name": "Hourly",
+        "symbol": "Hourly",
+        "amount": "12",
+        "logo": "⏳"
+      },
+      {
+        "name": "Daily",
+        "symbol": "Daily",
+        "amount": "96",
+        "logo": "🕒"
+      },
+      {
+        "name": "Weekly",
+        "symbol": "Weekly",
+        "amount": "520",
+        "logo": "📅"
+      }],
+
+
       "currencies": [
         {
           "name": "Bitcoin",
@@ -128,42 +154,47 @@
   "mentions": [
     {
       "id": 1,
-      "date": "Dec 15, 2024",
+      "date": "15",
+      "month": "Jul",
       "photo": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
       "news": "Trump mentions Bitcoin in latest speech",
-      "dialog": "Former President discusses cryptocurrency adoption and regulatory framework during economic policy address.",
+      "dialog": "$2.45m Vol",
       "tradeValue": "$2.45"
     },
     {
       "id": 2,
-      "date": "Dec 14, 2024",
+      "date": "14",
+      "month": "Jul",
       "photo": "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=400",
       "news": "Elon Musk tweets about AI regulation",
-      "dialog": "Tesla CEO shares thoughts on artificial intelligence governance and safety measures in recent social media posts.",
+      "dialog": "$1.89m Vol",
       "tradeValue": "$1.89"
     },
     {
       "id": 3,
-      "date": "Dec 13, 2024",
+      "date": "13",
+      "month": "Jul",
       "photo": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
       "news": "Federal Reserve mentions inflation targets",
-      "dialog": "Central bank officials discuss monetary policy adjustments and economic outlook in quarterly meeting.",
+      "dialog": "$3.12m Vol",
       "tradeValue": "$3.12"
     },
     {
       "id": 4,
-      "date": "Dec 12, 2024",
+      "date": "12",
+      "month": "Jul",
       "photo": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=400",
       "news": "Climate summit mentions carbon credits",
-      "dialog": "International delegates discuss environmental policies and carbon trading mechanisms at global conference.",
+      "dialog": "$12m Vol",
       "tradeValue": "$0.95"
     },
     {
       "id": 5,
-      "date": "Dec 11, 2024",
+      "date": "11",
+      "month": "Jul",
       "photo": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
       "news": "Tech giants mention metaverse expansion",
-      "dialog": "Major technology companies announce new virtual reality initiatives and digital transformation strategies.",
+      "dialog": "$20m Vol",
       "tradeValue": "$4.67"
     }
   ],

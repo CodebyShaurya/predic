@@ -9,9 +9,15 @@ interface Currency {
   amount: string;
   logo: string;
 }
+interface Timeframe {
+  name: string;
+  symbol: string;
+  amount: string;
+  logo: string;}
+
 
 interface CryptoSidebarProps {
-  timeframes: string[];
+  timeframes: Timeframe[];
   currencies: Currency[];
 }
 
@@ -20,24 +26,32 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
   const [activeCurrency, setActiveCurrency] = useState<string | null>(null);
 
   return (
-    <div className="bg-[#1E1E1E] border border-gray-700 rounded-lg p-4 h-fit">
+    <div className="bg-[#101010 border-r border-gray-700  p-4 h-fit">
       {/* Timeframes */}
       <div className="mb-6">
         {/* <h3 className="text-white font-semibold mb-3">Timeframes</h3> */}
         <div className="space-y-2">
           {timeframes.map((timeframe) => (
             <Button
-              key={timeframe}
+              key={timeframe.logo}
               variant={activeTimeframe === timeframe ? "default" : "ghost"}
               size="sm"
               onClick={() => setActiveTimeframe(timeframe)}
-              className={`w-full justify-start ${
+              className={`w-full flex justify-between items-center ${
                 activeTimeframe === timeframe
                   ? 'bg-gray-800 text-white hover:bg-gray-800'
                   : 'text-gray-300 hover:text-white hover:bg-gray-700'
               }`}
             >
-              {timeframe}
+              <div className="flex items-center space-x-3">
+                {/* If logo is an image URL, use <img src={timeframe.logo} ... /> */}
+                <span className="text-lg font-bold">{timeframe.logo}</span>
+                <div className="text-left">
+                  <div className="text-lg">{timeframe.name}</div>
+                  {/* <div className="text-xs opacity-75">{timeframe.symbol}</div> */}
+                </div>
+              </div>
+              <div className="text-right font-semibold">{timeframe.amount}</div>
             </Button>
           ))}
         </div>
@@ -62,8 +76,8 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
               <div className="flex items-center space-x-3">
                 <span className="text-lg font-bold">{currency.logo}</span>
                 <div className="text-left">
-                  <div className="font-medium">{currency.name}</div>
-                  <div className="text-xs opacity-75">{currency.symbol}</div>
+                  <div className="text-lg">{currency.name}</div>
+                  {/* <div className="text-xs opacity-75">{currency.symbol}</div> */}
                 </div>
               </div>
               <div className="text-right">
