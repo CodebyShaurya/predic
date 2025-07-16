@@ -26,7 +26,7 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
   const [activeCurrency, setActiveCurrency] = useState<string | null>(null);
 
   return (
-    <div className="bg-[#101010 border-r border-gray-700  p-4 h-fit">
+    <div className="bg-[#101010] border-r border-gray-700  p-4 h-fit">
       {/* Timeframes */}
       <div className="mb-6">
         {/* <h3 className="text-white font-semibold mb-3">Timeframes</h3> */}

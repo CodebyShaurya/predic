@@ -74,7 +74,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
             <Button variant="ghost" className="text-[#7371FF] hover:text-white hover:bg-[#1B1B1B]">
               {data.auth.login}
             </Button>
-            <Button className="bg-gradient-to-br from-violet-600 to-indigo-600 hover:bg-purple-700 text-white ">
+            <Button className="bg-gradient-to-r from-[#8A66FC] to-[#5A34DF] hover:bg-purple-700 text-white ">
               {data.auth.signup}
             </Button>
 
@@ -156,7 +156,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                 <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800 flex-1">
                   {data.auth.login}
                 </Button>
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white flex-1">
+                <Button className="bg-gradient-to-r from-[#8A66FC] to-[#5A34DF] text-white flex-1">
                   {data.auth.signup}
                 </Button>
               </div>
