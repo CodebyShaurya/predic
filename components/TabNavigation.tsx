@@ -60,7 +60,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
     'Word Mentions': '/mentions',
     // Economy: '/economy',
     Election: '/election',
-    'All Market': '/all-market',
+    // 'All Market': '/all-market',
     'Activity': '/activity',
     'Leaderboard': '/leaderboard',
     'Dashboards': '/dashboard',
