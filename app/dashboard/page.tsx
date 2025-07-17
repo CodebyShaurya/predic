@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { Calendar, Clock, TrendingUp, Vote, DollarSign, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
@@ -127,20 +127,21 @@ const dashboardData = {
     worldSeries: {
       title: "World Series Championship",
       teams: [
-        { name: "Yankees", logo: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 65 },
-        { name: "Dodgers", logo: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 35 }
+        { name: "Yankees", logo: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 30, color: "#8A66FC" },
+        { name: "Dodgers", logo: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 25, color: "#22c55e" },
+        { name: "Red Sox", logo: "https://images.pexels.com/photos/1707828/pexels-photo-1707828.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 20, color: "#f59e0b" },
+        { name: "Cubs", logo: "https://images.pexels.com/photos/1632091/pexels-photo-1632091.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 15, color: "#ef4444" },
+        { name: "Giants", logo: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=100", percentage: 10, color: "#3b82f6" }
       ]
     },
     homeRunLeaders: [
       { name: "Aaron Judge", percentage: 92 },
       { name: "Mike Trout", percentage: 78 },
-      { name: "Ronald Acuña Jr.", percentage: 85 }
+      { name: "Ronald Acuña Jr.", percentage: 85 },
+      { name: "Shohei Ohtani", percentage: 80 },
+      { name: "Vladimir Guerrero Jr.", percentage: 75 }
     ],
-    topComponentData: [
-      { name: 'Team A', value: 45 },
-      { name: 'Team B', value: 35 },
-      { name: 'Team C', value: 20 }
-    ]
+
   },
   fedRates: {
     dates: ["Jul 30", "Sep 17", "Oct 29"],
@@ -337,7 +338,7 @@ export default function DashboardPage() {
   const renderSports = () => (
     <div className="space-y-8">
       <div>
-        <h2 className="text-white text-2xl font-bold mb-6">Sports Dashboard</h2>
+        <h2 className="text-white text-2xl font-semibold my-6">Sports Dashboard</h2>
         
         <div className="flex space-x-2 mb-6">
           {dashboardData.sports.options.map((option) => (
@@ -347,32 +348,32 @@ export default function DashboardPage() {
               onClick={() => setActiveSportsOption(option)}
               className={`${
                 activeSportsOption === option
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
-                  : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                     ? 'bg-gradient-to-r from-[#8A66FC] to-[#5A34DF] text-white '
+                    : 'text-gray-300 bg-[#232323] hover:text-white hover:bg-[#232323]'
+              } rounded-full`}
             >
               {option}
             </Button>
           ))}
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-8">
+        <div className="bg-[#101010] border border-gray-700 rounded-lg p-6 mb-8">
           <h3 className="text-white text-lg font-semibold mb-4">{dashboardData.sports.worldSeries.title}</h3>
           <div className="space-y-4">
             {dashboardData.sports.worldSeries.teams.map((team, index) => (
-              <div key={index} className="flex items-center justify-between">
+              <div key={index} className="flex  ">
                 <div className="flex items-center space-x-4">
                   <img src={team.logo} alt={team.name} className="w-8 h-8 rounded-full object-cover" />
-                  <span className="text-white font-medium">{team.name}</span>
+                  <span className="text-white font-medium mr-2">{team.name}</span>
                 </div>
-                <div className="flex items-center space-x-4 flex-1 max-w-xs">
-                  <div className="flex-1 bg-gray-600 rounded-full h-3">
+                <div className="flex  space-x-4 flex-1  ml-10">
+                  <span className="text-white font-bold">{team.percentage}%</span>
+                  <div className="flex-1  rounded-sm h-4  w-full">
                     <div
-                      className="h-3 rounded-full bg-purple-600"
-                      style={{ width: `${team.percentage}%` }}
+                      className="h-6 rounded-sm w-full"
+                      style={{ width: `${team.percentage}%`, backgroundColor: team.color }}
                     ></div>
                   </div>
-                  <span className="text-white font-bold">{team.percentage}%</span>
                 </div>
               </div>
             ))}
@@ -380,29 +381,73 @@ export default function DashboardPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          {dashboardData.sports.homeRunLeaders.map((leader, index) => (
-            <div key={index} className="bg-gray-800 border border-gray-700 rounded-lg p-4">
+          {dashboardData.sports.homeRunLeaders.slice(0,3).map((leader, index) => (
+            <div key={index} className="bg-[#101010] border border-gray-700 rounded-lg p-4">
               <h4 className="text-white font-medium mb-3">Home Run Leader</h4>
-              <div className="flex items-center justify-between">
-                <span className="text-white">{leader.name}</span>
-                <span className="text-purple-400 font-bold">{leader.percentage}%</span>
-              </div>
+              <ul className="text-white space-y-1">
+                {dashboardData.sports.homeRunLeaders.slice(0, 5).map((player, idx) => (
+                  <li key={idx} className="flex justify-between">
+                    <span>{player.name}</span>
+                    <span className="text-purple-400 font-bold">{player.percentage}%</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        <div className="bg-[#101010] border border-gray-700 rounded-lg p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Top Performance</h3>
-          <ResponsiveContainer width="100%" height={200}>
-            <BarChart data={dashboardData.sports.topComponentData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-              <XAxis dataKey="name" stroke="#9ca3af" />
-              <YAxis stroke="#9ca3af" />
-              <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151' }} />
-              <Bar dataKey="value" fill="#8b5cf6" />
-            </BarChart>
-          </ResponsiveContainer>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <div className="bg-[#101010] border border-gray-700 rounded-lg p-6 mb-8">
+          <h3 className="text-white text-lg font-semibold mb-4">{dashboardData.sports.worldSeries.title}</h3>
+          <div className="space-y-4">
+            {dashboardData.sports.worldSeries.teams.map((team, index) => (
+              <div key={index} className="flex  ">
+                <div className="flex items-center space-x-4">
+                  <img src={team.logo} alt={team.name} className="w-8 h-8 rounded-full object-cover" />
+                  <span className="text-white font-medium mr-2">{team.name}</span>
+                </div>
+                <div className="flex  space-x-4 flex-1  ml-10">
+                <span className="text-white font-bold">{team.percentage}%</span>
+                  <div className="flex-1  rounded-sm h-4  w-full">
+                    <div
+                      className="h-6 rounded-sm bg-[#8A66FC] w-full"
+                      style={{ width: `${team.percentage}%`, backgroundColor: team.color }}
+                    ></div>
+                  </div>
+                 
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+        <div className="bg-[#101010] border border-gray-700 rounded-lg p-6 mb-8">
+          <h3 className="text-white text-lg font-semibold mb-4">{dashboardData.sports.worldSeries.title}</h3>
+          <div className="space-y-4">
+            {dashboardData.sports.worldSeries.teams.map((team, index) => (
+              <div key={index} className="flex  ">
+                <div className="flex items-center space-x-4">
+                  <img src={team.logo} alt={team.name} className="w-8 h-8 rounded-full object-cover" />
+                  <span className="text-white font-medium mr-2">{team.name}</span>
+                </div>
+                <div className="flex  space-x-4 flex-1  ml-10">
+                <span className="text-white font-bold">{team.percentage}%</span>
+                  <div className="flex-1  rounded-sm h-4  w-full">
+                    <div
+                      className="h-6 rounded-sm bg-[#8A66FC] w-full"
+                      style={{ width: `${team.percentage}%`, backgroundColor: team.color }}
+                    ></div>
+                  </div>
+                 
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        </div>
+        </div>
+        
       </div>
     </div>
   );
@@ -410,86 +455,94 @@ export default function DashboardPage() {
   const renderFedRates = () => (
     <div className="space-y-8">
       <div>
-        <h2 className="text-white text-2xl font-bold mb-6">Fed Rates</h2>
+        <h2 className="text-white text-2xl font-bold my-6">Fed Rates</h2>
+        <div className="flex space-x-2 mb-6">
+          {dashboardData.fedRates.dates.map((option) => (
+            <Button
+              key={option}
+              variant={activeSportsOption === option ? "default" : "ghost"}
+              onClick={() => setActiveSportsOption(option)}
+              className={`${
+                activeSportsOption === option
+                     ? 'bg-gradient-to-r from-[#8A66FC] to-[#5A34DF] text-white '
+                    : 'text-gray-300 bg-[#232323] hover:text-white hover:bg-[#232323]'
+              } rounded-full`}
+            >
+              {option}
+            </Button>
+          ))}
+        </div>
         
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-8">
-          <div className="flex justify-center space-x-8">
-            {dashboardData.fedRates.dates.map((date, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold">
-                  {date}
+   
+
+        <div className="bg-[#101010] border border-gray-700 rounded-lg p-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-0">
+            <div className="flex flex-col items-center md:items-start md:justify-center w-full md:w-auto">
+              <span className="text-gray-400 text-md">July 14 EARNING</span>
+              <span className="text-white text-4xl font-semibold">No Change</span>
+            </div>
+            <div className="flex flex-col items-center w-full md:w-auto">
+              <ResponsiveContainer width={window.innerWidth < 500 ? 120 : 200} height={window.innerWidth < 500 ? 120 : 200} className="-mb-32">
+                <PieChart width={window.innerWidth < 500 ? 120 : 200} height={window.innerWidth < 500 ? 90 : 150}>
+                  <Pie
+                    data={[{ value: dashboardData.fedRates.noChangeData.percentage }, { value: 100 - dashboardData.fedRates.noChangeData.percentage }]}
+                    cx="50%"
+                    cy="50%"
+                    startAngle={180}
+                    endAngle={0}
+                    innerRadius={window.innerWidth < 500 ? 40 : 80}
+                    outerRadius={window.innerWidth < 500 ? 55 : 90}
+                    dataKey="value"
+                    stroke="none"
+                  >
+                    <Cell fill="#34C759" />
+                    <Cell fill="#C22D25" />
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
+              <div className="text-center mt-2">
+                <span className="text-white text-2xl font-bold">{dashboardData.fedRates.noChangeData.percentage}%</span>
+              </div>
+            </div>
+            <div className="flex flex-col items-center md:items-end w-full md:w-auto">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 text-purple-400 items-center md:justify-end">
+                <div className="text-gray-400 font-semibold flex justify-center items-center">Meeting In</div>
+                <div className="flex flex-row space-x-2">
+                  <div className="flex flex-col text-white text-xl items-center justify-center p-2 bg-[#232323] rounded-lg w-16">{dashboardData.fedRates.meetingTimer.days} <div className="text-gray-400 text-sm text-center">Day</div></div>
+                  <div className="flex flex-col text-white text-xl items-center justify-center p-2 bg-[#232323] rounded-lg w-16">{dashboardData.fedRates.meetingTimer.hours} <div className="text-gray-400 text-sm">Hour</div></div>
+                  <div className="flex flex-col text-white text-xl items-center justify-center p-2 bg-[#232323] rounded-lg w-16">{dashboardData.fedRates.meetingTimer.minutes} <div className="text-gray-400 text-sm">Minute</div></div>
+                  <div className="flex flex-col text-white text-xl items-center justify-center p-2 bg-[#232323] rounded-lg w-16">{dashboardData.fedRates.meetingTimer.seconds} <div className="text-gray-400 text-sm">Second</div></div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <span className="text-white text-lg font-semibold">No Change</span>
-              <div className="w-24 h-24">
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie
-                      data={[
-                        { value: dashboardData.fedRates.noChangeData.percentage },
-                        { value: 100 - dashboardData.fedRates.noChangeData.percentage }
-                      ]}
-                      cx="50%"
-                      cy="50%"
-                      startAngle={180}
-                      endAngle={0}
-                      innerRadius={15}
-                      outerRadius={35}
-                      dataKey="value"
-                    >
-                      <Cell fill="#22c55e" />
-                      <Cell fill="#374151" />
-                    </Pie>
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-              <span className="text-green-400 text-xl font-bold">
-                {dashboardData.fedRates.noChangeData.percentage}%
-              </span>
-            </div>
-            <div className="text-right">
-              <div className="text-white font-semibold mb-2">Meeting Timer</div>
-              <div className="flex space-x-2 text-purple-400">
-                <span>{dashboardData.fedRates.meetingTimer.days}d</span>
-                <span>{dashboardData.fedRates.meetingTimer.hours}h</span>
-                <span>{dashboardData.fedRates.meetingTimer.minutes}m</span>
-                <span>{dashboardData.fedRates.meetingTimer.seconds}s</span>
-              </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-8">
+        <div className="bg-[#101010]  rounded-lg p-6 mb-8">
           <h3 className="text-white text-lg font-semibold mb-4">Fed Decision Probabilities</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={dashboardData.fedRates.decisionProbabilities}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+              {/* <CartesianGrid strokeDasharray="3 3" stroke="#374151" /> */}
               <XAxis dataKey="rate" stroke="#9ca3af" />
               <YAxis stroke="#9ca3af" />
-              <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151' }} />
-              <Bar dataKey="probability" fill="#8b5cf6" />
+              <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: '0px solid #374151' }} />
+              <Bar dataKey="probability" fill="#8b5cf6" barSize={200} />
             </BarChart>
           </ResponsiveContainer>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        <div className="bg-[#101010] rounded-lg p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Odds Over Time</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={dashboardData.fedRates.oddsOverTime}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+              {/* <CartesianGrid strokeDasharray="3 3" stroke="#374151" /> */}
               <XAxis dataKey="time" stroke="#9ca3af" />
               <YAxis stroke="#9ca3af" />
               <Tooltip contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151' }} />
               <Line type="monotone" dataKey="line1" stroke="#8b5cf6" strokeWidth={2} />
               <Line type="monotone" dataKey="line2" stroke="#22c55e" strokeWidth={2} />
               <Line type="monotone" dataKey="line3" stroke="#f59e0b" strokeWidth={2} />
+             <Legend verticalAlign="top" align="center" iconType="circle" wrapperStyle={{ color: '#fff' }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -557,34 +610,31 @@ return (
         <Navbar data={siteData.navbar} />
         <TabNavigation tabs={dashboardData.tabs} moreDropdown={dashboardData.moreDropdown} currentTab={activeSection} />
 
-      <div className=" pr-4 sm:pr-6 lg:pr-8 ">
+      <div className="pr-2 pl-2 sm:pr-6 sm:pl-4 lg:pr-8 lg:pl-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-[#101010] border-r border-gray-700  p-4 h-full">
-              <h3 className="text-white  font-semibold mb-4">Election Types</h3>
-              <div className="space-y-2">
+            <div className="bg-[#101010] border-r border-gray-700 p-2 sm:p-4 h-full flex flex-col items-center lg:items-start">
+              <h3 className="text-white font-semibold mb-4 text-center lg:text-left">Election Types</h3>
+              <div className="space-y-2 w-full">
                 {dashboardData.sidebar.map((item, index) => (
                   <Button
                     key={index}
-                    variant={activeSection  === item.name ? "default" : "ghost"}
+                    variant={activeSection === item.name ? "default" : "ghost"}
                     onClick={() => setActiveSection(item.name)}
                     className={`w-full justify-start ${
-                        activeSection  === item.name
+                      activeSection === item.name
                         ? 'bg-[#1A1A1A] text-white hover:bg-[#1A1A1A]'
                         : 'text-gray-300 hover:text-white hover:bg-gray-700'
                     }`}
                   >
-                    
-                      <span className="mr-2 w-6 h-6 flex items-center justify-center">{item.icon}</span>
-                    
+                    <span className="mr-2 w-6 h-6 flex items-center justify-center">{item.icon}</span>
                     {item.name}
                   </Button>
                 ))}
               </div>
             </div>
           </div>
-        
 
           {/* Main Content */}
           <div className="lg:col-span-3">
