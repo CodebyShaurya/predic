@@ -31,12 +31,10 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
     let visibleNews: string[] = [];
     let dropdownNews: string[] = [];
     if (windowWidth !== null) {
-      if (windowWidth >= 1024) { // lg and up
+      if (windowWidth >= 768) { // lg and up
         visibleNews = breakingNews;
         dropdownNews = [];
-      } else if (windowWidth >= 768) { // md to lg
-        visibleNews = breakingNews.slice(0, breakingNews.length - 3);
-        dropdownNews = breakingNews.slice(-3);
+      
       } else { // <md
         visibleNews = [];
         dropdownNews = breakingNews;
@@ -48,7 +46,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
   
 
   return (
-    <div className="bg-[#101010] ">
+    <div className="bg-[#101010] overflow-x-auto no-scrollbar ">
       <div className="px-4 sm:px-6 lg:px-16 py-4">
         <div className="flex flex-col space-y-4 lg:space-y-0">
           {/* Top Row: Search, Filter, Bookmark, Divider, Breaking News (desktop only) */}
@@ -76,7 +74,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
               {/* Breaking News label (always shown) */}
               <span className="text-[#AEA4FF] font-semibold text-sm w-28">Breaking News:</span>
               {/* Breaking News buttons (lg+) */}
-              <div className="hidden lg:flex items-center space-x-2 ml-2">
+              <div className="hidden lg:flex items-center space-x-2 ml-2 ">
                 {visibleNews.map((news) => (
                   <Button
                     key={news}
