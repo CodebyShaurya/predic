@@ -154,11 +154,11 @@ export default function Home() {
     <div className="min-h-screen bg-[#101010]">
       <Navbar data={siteData.navbar} />
       <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} currentTab="Trending" />
-      
+      <SearchFilter breakingNews={siteData.breakingNews} />
       
       <main className="  px-4 sm:px-6 lg:px-8 ">
         <div className="flex flex-col gap-3 pt-4 lg:pt-3 items-center m-0 w-screen lg:w-full lg:!max-w-[1350px] lg:mx-auto lg:h-auto lg:mb-4 lg:min-h-auto">
-        <SearchFilter breakingNews={siteData.breakingNews} />
+       
         <div className="grid h-auto gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
           {siteData.predictions.map((prediction: any) => (
             <PredictionCard key={prediction.id} prediction={prediction} />

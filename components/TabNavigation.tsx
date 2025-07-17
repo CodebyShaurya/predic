@@ -26,8 +26,28 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
   const filteredTabs = tabs.filter(
     (tab) => tab.toLowerCase() !== 'trending' && tab.toLowerCase() !== 'news'
   );
-  const visibleTabs = filteredTabs.slice(0, 6); // Show fewer tabs to make space for static ones
-  const remainingTabs = filteredTabs.slice(6);
+  // Show all tabs at once, no slicing
+  const visibleTabs = filteredTabs; 
+  const remainingTabs: string[] = []; // No remaining tabs, all are visible
+
+  // SVG icons for More dropdown options
+  const moreOptions = [
+    { label: 'All Market', icon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/><path d="M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+    ) },
+    { label: 'Activity', icon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><path d="M3 12h3l3 8 4-16 3 8h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+    ) },
+    { label: 'Leaderboard', icon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><rect x="3" y="10" width="4" height="11" stroke="currentColor" strokeWidth="2"/><rect x="10" y="3" width="4" height="18" stroke="currentColor" strokeWidth="2"/><rect x="17" y="14" width="4" height="7" stroke="currentColor" strokeWidth="2"/></svg>
+    ) },
+    { label: 'Dashboards', icon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><rect x="3" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2"/><rect x="14" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2"/><rect x="3" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2"/></svg>
+    ) },
+    { label: 'Rewards', icon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><circle cx="12" cy="8" r="7" stroke="currentColor" strokeWidth="2"/><path d="M8 21h8l-4-4-4 4z" stroke="currentColor" strokeWidth="2"/></svg>
+    ) },
+  ];
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
@@ -46,16 +66,12 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
     }
   };
 
-  // SVG for Trending (replace with your actual SVG if needed)
-  const TrendingIcon = () => (
-    <svg width="16" height="16" fill="currentColor" className="inline-block mr-1 align-text-bottom" viewBox="0 0 20 20"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" strokeWidth="2" fill="none"/></svg>
-  );
 
   return (
     <div className="bg-[#1B1B1B] border-b border-gray-800">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile: Only Trending, News, More */}
-        <div className="flex items-center space-x-1 py-3 lg:hidden overflow-x-auto scrollbar-hide">
+        <div className="flex items-center space-x-1 py-3 lg:hidden no-scrollbar overflow-x-auto">
           <Button
             variant={'ghost'}
             size="sm"
@@ -73,40 +89,24 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
             News
           </Button>
           <span className="text-gray-600 px-2 select-none">|</span>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="text-gray-300">
-                More <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="border-gray-700">
-              {filteredTabs.map((tab) => (
-                <DropdownMenuItem
-                  key={tab}
-                  onClick={() => handleTabClick(tab)}
-                  className="text-gray-300"
-                >
-                  {tab}
-                </DropdownMenuItem>
-              ))}
-              {moreDropdown.map((item) => (
-                <DropdownMenuItem
-                  key={item}
-                  onClick={() => setSelectedMore(item)}
-                  className="text-gray-300"
-                >
-                  {item}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {visibleTabs.map((tab) => (
+            <Button
+              key={tab}
+              variant={'ghost'}
+              size="sm"
+              onClick={() => handleTabClick(tab)}
+              className={`whitespace-nowrap ${activeTab === tab ? 'text-white' : 'text-gray-300'}`}
+            >
+              {tab}
+            </Button>
+          ))}
         </div>
 
-        {/* Desktop: Trending, News, Divider, then tabs, then More */}
+        {/* Desktop: Trending, News, Divider, then all tabs, then More */}
         <div className="hidden lg:block py-3">
           <div className="bg-[#1B1B1B]">
             <div className="px-4 sm:px-6 lg:px-8">
-              <div className="flex space-x-1 py-3 overflow-x-auto">
+              <div className="flex space-x-1 py-3 noscroll">
                 <Button
                   variant={'ghost'}
                   size="sm"
@@ -135,35 +135,25 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
                     {tab}
                   </Button>
                 ))}
-                {remainingTabs.length > 0 && (
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="sm" className="text-gray-300">
-                        More <ChevronDown className="ml-1 h-4 w-4" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="border-gray-700">
-                      {remainingTabs.map((tab) => (
-                        <DropdownMenuItem
-                          key={tab}
-                          onClick={() => handleTabClick(tab)}
-                          className="text-gray-300"
-                        >
-                          {tab}
-                        </DropdownMenuItem>
-                      ))}
-                      {moreDropdown.map((item) => (
-                        <DropdownMenuItem
-                          key={item}
-                          onClick={() => setSelectedMore(item)}
-                          className="text-gray-300"
-                        >
-                          {item}
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                )}
+                {/* More button after all tabs, only on lg screens */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm" className="text-gray-300">
+                      More <ChevronDown className="ml-1 h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="border-gray-700">
+                    {moreOptions.map((item) => (
+                      <DropdownMenuItem
+                        key={item.label}
+                        onClick={() => setSelectedMore(item.label)}
+                        className="text-gray-300 flex items-center"
+                      >
+                        {item.icon}{item.label}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </div>
