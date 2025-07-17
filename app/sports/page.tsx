@@ -9,6 +9,8 @@ import CompanyPrices from '@/components/CompanyPrices';
 import SportsSidebar from '@/components/SportsSidebar';
 import NBAMatches from '@/components/NBAMatches';
 import GameDetails from '@/components/GameDetails';
+import MatchCarousel from '@/components/MatchCarousel';
+import SportsSidebarTabs from '@/components/SportsSidebarTabs';
 
 export default function SportsPage() {
   const [siteData, setSiteData] = useState<any>(null);
@@ -71,29 +73,44 @@ export default function SportsPage() {
       <Navbar data={siteData.navbar} />
       <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} />
       {/* <SearchFilter breakingNews={siteData.breakingNews} /> */}
-      
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <TopBoxes 
-          boxes={siteData.sports.topBoxes} 
-          teamMatchups={siteData.sports.teamMatchups}
-        />
-        <CompanyPrices companies={siteData.sports.companies} />
+
+      {/* Match Carousel */}
+      <MatchCarousel
+        matches={siteData.sports.nbaMatches?.map((match: any, idx: number) => ({
+          id: match.id || idx.toString(),
+          time: match.time || '7:00 PM',
+          volume: '$20m Vol',
+          homeTeam: {
+            name: match.homeTeam?.name || 'Team A',
+            logo: match.homeTeam?.logo || '/logo.png',
+            bid: match.homeTeam?.bid || 0,
+          },
+          awayTeam: {
+            name: match.awayTeam?.name || 'Team B',
+            logo: match.awayTeam?.logo || '/logo.png',
+            bid: match.awayTeam?.bid || 0,
+          },
+        })) || []}
+      />
+
+      <main className="pr-4 sm:pr-6 lg:pr-8 ">
         
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
-            <SportsSidebar
-              categories={siteData.sports.sidebar.categories}
-              leagues={siteData.sports.sidebar.leagues}
-            />
+            <SportsSidebarTabs />
+            <br />
+            {/* Team logos and names side by side for selected match */}
+         
           </div>
-          
+
           <div className="lg:col-span-2">
             <NBAMatches
               nbaMatches={siteData.sports.nbaMatches}
               onMatchSelect={handleMatchSelect}
             />
           </div>
-          
+
           <div className="lg:col-span-1">
             {selectedMatch && <GameDetails selectedGame={selectedMatch} />}
           </div>

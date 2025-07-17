@@ -359,14 +359,14 @@
         "homeTeam": {
           "name": "Nets",
           "short": "BKN",
-          "color": "bg-gray-600",
+          "color": "bg-blue-600",
           "stats": "35-30",
           "bid": "$1.95"
         },
         "awayTeam": {
           "name": "Knicks",
           "short": "NYK",
-          "color": "bg-orange-600",
+          "color": "bg-yellow-500",
           "stats": "40-25",
           "bid": "$1.85"
         },
@@ -422,9 +422,9 @@
       },
       "amount": "$2,500",
       "tradeSuggestions": [
-        "Buy Lakers at current odds",
-        "Hedge with Warriors spread",
-        "Consider over/under 220.5"
+        "+1",
+        "+18",
+        "+10"
       ]
     }
   }
