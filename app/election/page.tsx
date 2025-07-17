@@ -98,7 +98,7 @@ const electionData = {
 
 export default function ElectionPage() {
   const [siteData, setSiteData] = useState<any>(null);
-  const [selectedMatch, setSelectedMatch] = useState<any>(null);
+  // const [selectedMatch, setSelectedMatch] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   
     useEffect(() => {
@@ -108,7 +108,7 @@ export default function ElectionPage() {
           if (response.ok) {
             const data = await response.json();
             setSiteData(data);
-            setSelectedMatch(data.sports.selectedGame);
+            // setSelectedMatch(data.sports.selectedGame);
           }
         } catch (error) {
           console.error('Error loading data:', error);
