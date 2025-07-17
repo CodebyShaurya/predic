@@ -49,21 +49,28 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
     ) },
   ];
 
+  // Route mapping for all tabs and More options
+  const tabRoutes: Record<string, string> = {
+    Trending: '/',
+    // News: '/news',
+    // Politics: '/politics',
+    Sports: '/sports',
+    Crypto: '/crypto',
+    // 'Tech': '/tech',
+    'Word Mentions': '/mentions',
+    // Economy: '/economy',
+    Election: '/election',
+    'All Market': '/all-market',
+    'Activity': '/activity',
+    'Leaderboard': '/leaderboard',
+    'Dashboards': '/dashboard',
+    'Rewards': '/rewards',
+  };
+
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
-    if (tab.toLowerCase() === 'sports') {
-      router.push('/sports');
-    } else if (tab.toLowerCase() === 'crypto') {
-      router.push('/crypto');
-    } else if (tab.toLowerCase() === 'word mentions') {
-      router.push('/mentions');
-    } else if (tab.toLowerCase() === 'trending') {
-      router.push('/'); // Adjust as needed
-    } else if (tab.toLowerCase() === 'news') {
-      router.push('/'); // Adjust as needed
-    } else {
-      router.push('/');
-    }
+    const route = tabRoutes[tab] || '/';
+    router.push(route);
   };
 
 
@@ -146,7 +153,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
                     {moreOptions.map((item) => (
                       <DropdownMenuItem
                         key={item.label}
-                        onClick={() => setSelectedMore(item.label)}
+                        onClick={() => handleTabClick(item.label)}
                         className="text-gray-300 flex items-center"
                       >
                         {item.icon}{item.label}
