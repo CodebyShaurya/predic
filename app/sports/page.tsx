@@ -93,7 +93,7 @@ export default function SportsPage() {
         })) || []}
       />
 
-      <main className="pr-4 sm:pr-6 lg:pr-8 ">
+      <main className="pr-4 sm:pr-6 lg:pr-8 px-2 xl:px-0 max-w-7xl mx-auto  z-1">
         
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">

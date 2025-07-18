@@ -75,7 +75,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
 
 
   return (
-    <div className="bg-[#1B1B1B] border-b border-gray-800">
+    <div className="bg-[#1B1B1B] border-b border-gray-800 sticky top-16 z-50">
       <div className=" max-w-7xl mx-auto">
         {/* Mobile: Only Trending, News, More */}
         <div className="flex items-center space-x-1 py-3 lg:hidden no-scrollbar overflow-x-auto">
@@ -110,7 +110,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
         </div>
 
         {/* Desktop: Trending, News, Divider, then all tabs, then More */}
-        <div className="hidden lg:block py-3">
+        <div className="hidden lg:block py03">          
           <div className="bg-[#1B1B1B]">
             <div className="">
               <div className="flex space-x-1 py-3 noscroll">

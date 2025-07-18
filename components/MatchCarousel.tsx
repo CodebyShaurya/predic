@@ -20,12 +20,12 @@ interface MatchCarouselProps {
 
 const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
   return (
-    <div className="overflow-x-auto no-scrollbar">
+    <div className="overflow-x-auto no-scrollbar sticky top-[120px] z-10">
       <div className="flex ">
         {[...matches,matches[0],matches[1],...matches].map((match) => (
           <div
             key={match.id}
-            className="w-48 border-[#181818] border-2 rounded-lg shadow flex flex-col items-center justify-between p-4 min-w-[12rem]"
+            className="w-48 border-[#181818] bg-[#101010] border-2 rounded-lg shadow flex flex-col items-center justify-between p-4 min-w-[12rem]"
           >
             <div className="w-full flex justify-between items-center text-sm text-white mb-2 font-light">
               <span className='bg-[#FFFFFF0A]'>{match.time}</span>

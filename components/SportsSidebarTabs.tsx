@@ -20,7 +20,7 @@ const SportsSidebarTabs: React.FC = () => {
   const [activeTab2, setActiveTab2] = useState('Team 1');
 
   return (
-    <div className="bg-[#101010] border-r  border-gray-700  p-4 h-fit">
+    <div className="bg-[#101010] lg:border-r  border-gray-700  p-4 h-fit">
       <div className="space-y-4 border-b border-gray-700 pb-5">
         {tabs.map((tab) => (
           <button
