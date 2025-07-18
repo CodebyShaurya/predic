@@ -221,10 +221,11 @@ export default function RewardsPage() {
             </div>
           </div>
         </div>
+        <div className='max-w-7xl mx-auto justify-center px-4 sm:px-6 lg:px-8'>
 
         {/* Tabs */}
         <div className="mb-6 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 ju">
             {rewardsData.tabs.map((tab) => (
               <Button
                 key={tab}
@@ -392,6 +393,7 @@ export default function RewardsPage() {
             <Bookmark className="h-4 w-4" />
             <span>Bookmark All</span>
           </button>
+        </div>
         </div>
 
         {filteredRewards.length === 0 && (
