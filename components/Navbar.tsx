@@ -34,7 +34,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
 
   return (
     <nav className="bg-[#1B1B1B] border-b border-gray-800 sticky top-0 z-50">
-      <div className=" mx-[5%] px-4 sm:px-6 lg:px-8">
+      <div className=" px-2 xl:px-0 max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16 ">
           {/* Logo and Search */}
           <div className="flex items-center space-x-4 w-60 md:w-full">

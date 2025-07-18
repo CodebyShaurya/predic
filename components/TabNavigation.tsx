@@ -76,7 +76,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
 
   return (
     <div className="bg-[#1B1B1B] border-b border-gray-800">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" max-w-7xl mx-auto">
         {/* Mobile: Only Trending, News, More */}
         <div className="flex items-center space-x-1 py-3 lg:hidden no-scrollbar overflow-x-auto">
           <Button
@@ -112,7 +112,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
         {/* Desktop: Trending, News, Divider, then all tabs, then More */}
         <div className="hidden lg:block py-3">
           <div className="bg-[#1B1B1B]">
-            <div className="px-4 sm:px-6 lg:px-8">
+            <div className="">
               <div className="flex space-x-1 py-3 noscroll">
                 <Button
                   variant={'ghost'}

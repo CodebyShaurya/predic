@@ -47,7 +47,7 @@ export default function SearchFilter({ breakingNews }: SearchFilterProps) {
 
   return (
     <div className="bg-[#101010] overflow-x-auto no-scrollbar ">
-      <div className="px-4 sm:px-6 lg:px-16 py-4">
+      <div className=" py-4 px-2 xl:px-0 max-w-7xl mx-auto">
         <div className="flex flex-col space-y-4 lg:space-y-0">
           {/* Top Row: Search, Filter, Bookmark, Divider, Breaking News (desktop only) */}
           <div className="flex items-center w-full">
