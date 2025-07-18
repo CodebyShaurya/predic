@@ -11,29 +11,31 @@
   "crypto": {
     "sidebar": {
       "timeframes": [
-        {
+        
+        
+      {
         "name": "Live/Soon",
         "symbol": "Live/Soon",
         "amount": "23",
-        "logo": "🔥"
+        "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"#FF0000\"/></svg>"
       },
       {
         "name": "Hourly",
         "symbol": "Hourly",
         "amount": "12",
-        "logo": "⏳"
+        "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"#FFAA00\"/></svg>"
       },
       {
         "name": "Daily",
         "symbol": "Daily",
         "amount": "96",
-        "logo": "🕒"
+        "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"#FFAA00\"/></svg>"
       },
       {
         "name": "Weekly",
         "symbol": "Weekly",
         "amount": "520",
-        "logo": "📅"
+        "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"#FFAA00\"/></svg>"
       }],
 
 
@@ -127,12 +129,16 @@
   "tabs": [
     "Trending",
     "News",
+    "Middle East",
     "Politics",
     "Sports",
     "Crypto",
     "Tech",
-    "Word Mentions",
+    "World",
+    "Trump",
+    "Mentions",
     "Economy",
+    "Culture",
     "Election"
   ],
   "moreDropdown": [
@@ -194,72 +200,399 @@
       "news": "Tech giants mention metaverse expansion",
       "dialog": "$20m Vol",
       "tradeValue": "$4.67"
+    },
+    {
+      "id": 6,
+      "date": "10",
+      "month": "Jul",
+      "photo": "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "news": "World leaders mention global trade agreements",
+      "dialog": "$15m Vol",
+      "tradeValue": "$3.50"
+    },
+    {
+      "id": 7,
+      "date": "9",
+      "month": "Jul",
+      "photo": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "news": "Sports teams mention new sponsorship deals",
+      "dialog": "$8.5m Vol",
+      "tradeValue": "$1.20"
+    },
+    {
+      "id": 8,
+      "date": "8",
+      "month": "Jul",
+      "photo": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "news": "Entertainment industry mentions streaming wars",
+      "dialog": "$5m Vol",
+      "tradeValue": "$0.75"
     }
   ],
   "predictions": [
-    {
-      "id": 1,
-      "type": "list",
-      "image": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "title": "2024 Presidential Election Winner",
-      "volume": "$20m",
-      "options": [
-        {
-          "name": "Joe Biden",
-          "percentage": 45
-        },
-        {
-          "name": "Donald Trump",
-          "percentage": 38
-        },
-        {
-          "name": "Other Candidate",
-          "percentage": 17
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "type": "binary",
-      "image": "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "title": "Will Bitcoin reach $100k by end of 2024?",
-      "percentage": 67,
-      "volume": "$15m",
-      "yesPrice": "$0.67",
-      "noPrice": "$0.33"
-    },
-    {
-      "id": 3,
-      "type": "list",
-      "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "title": "Next Tech Giant to Reach $5T Market Cap",
-      "volume": "$8m",
-      "options": [
-        {
-          "name": "Apple",
-          "percentage": 42
-        },
-        {
-          "name": "Microsoft",
-          "percentage": 35
-        },
-        {
-          "name": "NVIDIA",
-          "percentage": 23
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "type": "binary",
-      "image": "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "title": "Will there be a recession in 2024?",
-      "percentage": 34,
-      "volume": "$12m",
-      "yesPrice": "$0.34",
-      "noPrice": "$0.66"
-    }
-  ],
+  {
+    "id": 1,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/3944308/pexels-photo-3944308.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "2028 Presidential Election Winner",
+    "volume": "$7k",
+    "options": [
+      {
+        "name": "JD Vance",
+        "percentage": 24
+      },
+      {
+        "name": "Nikki Haley",
+        "percentage": 14
+      },
+      {
+        "name": "Kamala Harris",
+        "percentage": 12
+      },
+      {
+        "name": "Pete Buttigieg",
+        "percentage": 11
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "binary",
+    "image": "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Will Bitcoin reach $200k by end of 2025?",
+    "percentage": 40,
+    "volume": "$25m",
+    "yesPrice": "$0.40",
+    "noPrice": "$0.60"
+  },
+  {
+    "id": 3,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Next Tech Giant to Reach $5T Market Cap",
+    "volume": "$8m",
+    "options": [
+      {
+        "name": "Microsoft",
+        "percentage": 48
+      },
+      {
+        "name": "Apple",
+        "percentage": 30
+      },
+      {
+        "name": "NVIDIA",
+        "percentage": 22
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "binary",
+    "image": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Will there be a US recession in 2025?",
+    "percentage": 19,
+    "volume": "$8m",
+    "yesPrice": "$0.19",
+    "noPrice": "$0.81"
+  },
+  {
+    "id": 5,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/1105452/pexels-photo-1105452.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "2028 Republican Presidential Nominee",
+    "volume": "$760k",
+    "options": [
+      {
+        "name": "J.D. Vance",
+        "percentage": 57
+      },
+      {
+        "name": "Glenn Youngkin",
+        "percentage": 22
+      },
+      {
+        "name": "Ron DeSantis",
+        "percentage": 20
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/7947703/pexels-photo-7947703.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "2028 Democratic Presidential Nominee",
+    "volume": "$4k",
+    "options": [
+      {
+        "name": "Pete Buttigieg",
+        "percentage": 22
+      },
+      {
+        "name": "Gavin Newsom",
+        "percentage": 20
+      },
+      {
+        "name": "Alexandria Ocasio-Cortez",
+        "percentage": 16
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "binary",
+    "image": "https://images.pexels.com/photos/8997486/pexels-photo-8997486.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Jerome Powell out as Fed Chair in 2025?",
+    "percentage": 22,
+    "volume": "$5m",
+    "yesPrice": "$0.22",
+    "noPrice": "$0.78"
+  },
+  {
+    "id": 8,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/290275/pexels-photo-290275.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Next New York City Mayor",
+    "volume": "$33m",
+    "options": [
+      {
+        "name": "Zohran Mamdani",
+        "percentage": 71
+      },
+      {
+        "name": "Andrew Cuomo",
+        "percentage": 17
+      },
+      {
+        "name": "Eric Adams",
+        "percentage": 10
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Fed Interest Rate Decision in July 2025",
+    "volume": "$59m",
+    "options": [
+      {
+        "name": "No change",
+        "percentage": 95
+      },
+      {
+        "name": "25 bps decrease",
+        "percentage": 4
+      },
+      {
+        "name": "25+ bps increase",
+        "percentage": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "binary",
+    "image": "https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Israel-Hamas ceasefire before August 2025?",
+    "percentage": 48,
+    "volume": "$5m",
+    "yesPrice": "$0.48",
+    "noPrice": "$0.52"
+  },
+  {
+    "id": 11,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/163834/motor-racing-formula-1-racing-car-163834.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "2025 F1 Drivers' Champion",
+    "volume": "$67m",
+    "options": [
+      {
+        "name": "Oscar Piastri",
+        "percentage": 55
+      },
+      {
+        "name": "Lando Norris",
+        "percentage": 39
+      },
+      {
+        "name": "Max Verstappen",
+        "percentage": 4
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/6770610/pexels-photo-6770610.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "How many Fed rate cuts in 2025?",
+    "volume": "$11m",
+    "options": [
+      {
+        "name": "2 (50 bps)",
+        "percentage": 35
+      },
+      {
+        "name": "1 (25 bps)",
+        "percentage": 25
+      },
+      {
+        "name": "0",
+        "percentage": 18
+      },
+      {
+        "name": "3 (75 bps)",
+        "percentage": 12
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/1249214/pexels-photo-1249214.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "2025 World Series Champion",
+    "volume": "$26m",
+    "options": [
+      {
+        "name": "Los Angeles Dodgers",
+        "percentage": 28
+      },
+      {
+        "name": "Detroit Tigers",
+        "percentage": 11
+      },
+      {
+        "name": "New York Yankees",
+        "percentage": 10
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "binary",
+    "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Will AI achieve AGI by the end of 2030?",
+    "percentage": 30,
+    "volume": "$18m",
+    "yesPrice": "$0.30",
+    "noPrice": "$0.70"
+  },
+  {
+    "id": 15,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Who will be the next Fed Chair?",
+    "volume": "$1m",
+    "options": [
+      {
+        "name": "No announcement by Dec 31",
+        "percentage": 31
+      },
+      {
+        "name": "Scott Bessent",
+        "percentage": 24
+      },
+      {
+        "name": "Kevin Warsh",
+        "percentage": 20
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Bitcoin price on July 25, 2025?",
+    "volume": "$4m",
+    "options": [
+      {
+        "name": "$118k–$119k",
+        "percentage": 45
+      },
+      {
+        "name": ">$119k",
+        "percentage": 37
+      },
+      {
+        "name": "$117k–$118k",
+        "percentage": 15
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "What price will Ethereum hit in August 2025?",
+    "volume": "$9m",
+    "options": [
+      {
+        "name": "Hit at least $3800",
+        "percentage": 74
+      },
+      {
+        "name": "Hit at least $4000",
+        "percentage": 41
+      },
+      {
+        "name": "Hit at least $4200",
+        "percentage": 22
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/17696417/pexels-photo-17696417/free-photo-of-flag-of-bolivia.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Bolivia Presidential Election Winner",
+    "volume": "$4m",
+    "options": [
+      {
+        "name": "Samuel Doria Medina",
+        "percentage": 53
+      },
+      {
+        "name": "Jorge Quiroga",
+        "percentage": 28
+      },
+      {
+        "name": "Andrónico Rodríguez",
+        "percentage": 18
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "list",
+    "image": "https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "What price will XRP hit in August 2025?",
+    "volume": "$3.7m",
+    "options": [
+      {
+        "name": "Hit at least $3.70",
+        "percentage": 77
+      },
+      {
+        "name": "Hit at least $4.00",
+        "percentage": 53
+      },
+      {
+        "name": "Hit at least $5.00",
+        "percentage": 9
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "binary",
+    "image": "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "title": "Will TikTok be banned in the US by 2026?",
+    "percentage": 58,
+    "volume": "$14m",
+    "yesPrice": "$0.58",
+    "noPrice": "$0.42"
+  }
+],
   "sports": {
     "topBoxes": [
       {
@@ -314,100 +647,236 @@
       ]
     },
     "nbaMatches": [
-      {
-        "id": 1,
-        "homeTeam": {
-          "name": "Lakers",
-          "short": "LAL",
-          "color": "bg-purple-600",
-          "stats": "45-20",
-          "bid": "$1.85"
-        },
-        "awayTeam": {
-          "name": "Warriors",
-          "short": "GSW",
-          "color": "bg-blue-600",
-          "stats": "42-23",
-          "bid": "$2.15"
-        },
-        "timer": "2h 30m",
-        "money": "$5.2M"
-      },
-      {
-        "id": 2,
-        "homeTeam": {
-          "name": "Celtics",
-          "short": "BOS",
-          "color": "bg-green-600",
-          "stats": "48-17",
-          "bid": "$1.65"
-        },
-        "awayTeam": {
-          "name": "Heat",
-          "short": "MIA",
-          "color": "bg-red-600",
-          "stats": "38-27",
-          "bid": "$2.35"
-        },
-        "timer": "4h 15m",
-        "money": "$3.8M"
-      },
-      {
-        "id": 3,
-        "homeTeam": {
-          "name": "Nets",
-          "short": "BKN",
-          "color": "bg-blue-600",
-          "stats": "35-30",
-          "bid": "$1.95"
-        },
-        "awayTeam": {
-          "name": "Knicks",
-          "short": "NYK",
-          "color": "bg-yellow-500",
-          "stats": "40-25",
-          "bid": "$1.85"
-        },
-        "timer": "6h 45m",
-        "money": "$2.1M"
-      }
-    ],
-    "teamMatchups": [
-      {
-        "id": 1,
-        "homeTeam": {
-          "name": "Lakers",
-          "short": "LAL",
-          "color": "bg-purple-600",
-          "price": "$1.85"
-        },
-        "awayTeam": {
-          "name": "Warriors",
-          "short": "GSW",
-          "color": "bg-blue-600",
-          "price": "$2.15"
-        }
-      },
-      {
-        "id": 2,
-        "homeTeam": {
-          "name": "Celtics",
-          "short": "BOS",
-          "color": "bg-green-600",
-          "price": "$1.65"
-        },
-        "awayTeam": {
-          "name": "Heat",
-          "short": "MIA",
-          "color": "bg-red-600",
-          "price": "$2.35"
-        }
-      }
-    ]
-    ,
-    "selectedGame": {
-      "name": "Lakers vs Warriors",
-      "teams": ["Lakers", "Warriors"],
+  {
+    "id": 1,
+    "homeTeam": {
+      "name": "Lakers",
+      "short": "LAL",
+      "color": "bg-purple-600",
+      "stats": "45-20",
+      "bid": "$1.85"
+    },
+    "awayTeam": {
+      "name": "Warriors",
+      "short": "GSW",
+      "color": "bg-blue-600",
+      "stats": "42-23",
+      "bid": "$2.15"
+    },
+    "timer": "2h 30m",
+    "money": "$5.2M"
+  },
+  {
+    "id": 2,
+    "homeTeam": {
+      "name": "Celtics",
+      "short": "BOS",
+      "color": "bg-green-600",
+      "stats": "48-17",
+      "bid": "$1.65"
+    },
+    "awayTeam": {
+      "name": "Heat",
+      "short": "MIA",
+      "color": "bg-red-600",
+      "stats": "38-27",
+      "bid": "$2.35"
+    },
+    "timer": "4h 15m",
+    "money": "$3.8M"
+  },
+  {
+    "id": 3,
+    "homeTeam": {
+      "name": "Nets",
+      "short": "BKN",
+      "color": "bg-gray-800",
+      "stats": "35-30",
+      "bid": "$1.95"
+    },
+    "awayTeam": {
+      "name": "Knicks",
+      "short": "NYK",
+      "color": "bg-orange-500",
+      "stats": "40-25",
+      "bid": "$1.85"
+    },
+    "timer": "6h 45m",
+    "money": "$2.1M"
+  },
+  {
+    "id": 4,
+    "homeTeam": {
+      "name": "Bucks",
+      "short": "MIL",
+      "color": "bg-green-800",
+      "stats": "49-16",
+      "bid": "$1.55"
+    },
+    "awayTeam": {
+      "name": "76ers",
+      "short": "PHI",
+      "color": "bg-blue-700",
+      "stats": "44-21",
+      "bid": "$2.45"
+    },
+    "timer": "8h 00m",
+    "money": "$4.5M"
+  },
+  {
+    "id": 5,
+    "homeTeam": {
+      "name": "Suns",
+      "short": "PHX",
+      "color": "bg-orange-600",
+      "stats": "41-25",
+      "bid": "$1.90"
+    },
+    "awayTeam": {
+      "name": "Clippers",
+      "short": "LAC",
+      "color": "bg-red-700",
+      "stats": "42-24",
+      "bid": "$1.90"
+    },
+    "timer": "9h 30m",
+    "money": "$6.1M"
+  },
+  {
+    "id": 6,
+    "homeTeam": {
+      "name": "Nuggets",
+      "short": "DEN",
+      "color": "bg-blue-900",
+      "stats": "50-15",
+      "bid": "$1.40"
+    },
+    "awayTeam": {
+      "name": "Mavericks",
+      "short": "DAL",
+      "color": "bg-blue-500",
+      "stats": "43-23",
+      "bid": "$2.95"
+    },
+    "timer": "10h 00m",
+    "money": "$4.2M"
+  },
+  {
+    "id": 7,
+    "homeTeam": {
+      "name": "Grizzlies",
+      "short": "MEM",
+      "color": "bg-sky-700",
+      "stats": "38-27",
+      "bid": "$1.75"
+    },
+    "awayTeam": {
+      "name": "Pelicans",
+      "short": "NOP",
+      "color": "bg-indigo-900",
+      "stats": "36-29",
+      "bid": "$2.20"
+    },
+    "timer": "11h 15m",
+    "money": "$1.8M"
+  },
+  {
+    "id": 8,
+    "homeTeam": {
+      "name": "Bulls",
+      "short": "CHI",
+      "color": "bg-red-700",
+      "stats": "33-32",
+      "bid": "$2.05"
+    },
+    "awayTeam": {
+      "name": "Raptors",
+      "short": "TOR",
+      "color": "bg-red-500",
+      "stats": "34-31",
+      "bid": "$1.75"
+    },
+    "timer": "12h 00m",
+    "money": "$950K"
+  },
+  {
+    "id": 9,
+    "homeTeam": {
+      "name": "Hawks",
+      "short": "ATL",
+      "color": "bg-red-600",
+      "stats": "35-30",
+      "bid": "$1.80"
+    },
+    "awayTeam": {
+      "name": "Wizards",
+      "short": "WAS",
+      "color": "bg-blue-800",
+      "stats": "28-37",
+      "bid": "$2.10"
+    },
+    "timer": "14h 30m",
+    "money": "$1.1M"
+  },
+  {
+    "id": 10,
+    "homeTeam": {
+      "name": "Cavaliers",
+      "short": "CLE",
+      "color": "bg-yellow-700",
+      "stats": "42-24",
+      "bid": "$1.60"
+    },
+    "awayTeam": {
+      "name": "Pacers",
+      "short": "IND",
+      "color": "bg-yellow-400",
+      "stats": "39-27",
+      "bid": "$2.40"
+    },
+    "timer": "16h 00m",
+    "money": "$2.5M"
+  },
+  {
+    "id": 11,
+    "homeTeam": {
+      "name": "Timberwolves",
+      "short": "MIN",
+      "color": "bg-blue-800",
+      "stats": "46-20",
+      "bid": "$1.50"
+    },
+    "awayTeam": {
+      "name": "Thunder",
+      "short": "OKC",
+      "color": "bg-blue-500",
+      "stats": "45-21",
+      "bid": "$2.60"
+    },
+    "timer": "18h 45m",
+    "money": "$3.3M"
+  },
+  {
+    "id": 12,
+    "homeTeam": {
+      "name": "Rockets",
+      "short": "HOU",
+      "color": "bg-red-600",
+      "stats": "25-40",
+      "bid": "$2.55"
+    },
+    "awayTeam": {
+      "name": "Spurs",
+      "short": "SAS",
+      "color": "bg-gray-500",
+      "stats": "22-43",
+      "bid": "$1.55"
+    }
+  }],
+
+  "selectedGame": {
+    "name": "Lakers vs Warriors",
+    "teams": ["Lakers", "Warriors"],
       "homeTeam": {
         "name": "Lakers",
         "short": "LAL",

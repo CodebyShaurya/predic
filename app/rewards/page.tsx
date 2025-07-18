@@ -199,12 +199,12 @@ export default function RewardsPage() {
       <div className="   ">
         {/* Banner */}
             <div className="bg-gradient-to-br from-[#9A66FC]  to-[#5A34DF] p-6 sm:p-8 mb-8">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between max-w-7xl mx-auto">
             <div className="mb-4 lg:mb-0">
               <h1 className="text-white text-3xl sm:text-4xl font-bold mb-2">
                 {rewardsData.banner.title}
               </h1>
-              <p className="text-purple-100 text-sm sm:text-base">
+              <p className="text-purple-100 text-sm sm:text-base max-w-xl">
                 {rewardsData.banner.subtitle}
               </p>
             </div>

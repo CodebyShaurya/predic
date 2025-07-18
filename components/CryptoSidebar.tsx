@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
 import { Button } from '@/components/ui/button';
 
 interface Currency {
@@ -13,7 +13,8 @@ interface Timeframe {
   name: string;
   symbol: string;
   amount: string;
-  logo: string;}
+  logo: string | ReactNode;
+}
 
 
 interface CryptoSidebarProps {
@@ -33,7 +34,7 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
         <div className="space-y-2">
           {timeframes.map((timeframe) => (
             <Button
-              key={timeframe.logo}
+              key={timeframe.name}
               variant={activeTimeframe === timeframe ? "default" : "ghost"}
               size="sm"
               onClick={() => setActiveTimeframe(timeframe)}
@@ -44,8 +45,12 @@ export default function CryptoSidebar({ timeframes, currencies }: CryptoSidebarP
               }`}
             >
               <div className="flex items-center space-x-3">
-                {/* If logo is an image URL, use <img src={timeframe.logo} ... /> */}
-                <span className="text-lg font-bold">{timeframe.logo}</span>
+                {/* Render SVG icon or text logo */}
+                {typeof timeframe.logo === 'string' ? (
+                  <span className="text-lg font-bold">{timeframe.logo}</span>
+                ) : (
+                  <div className="flex-shrink-0">{timeframe.logo}</div>
+                )}
                 <div className="text-left">
                   <div className="text-lg">{timeframe.name}</div>
                   {/* <div className="text-xs opacity-75">{timeframe.symbol}</div> */}

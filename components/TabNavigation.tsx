@@ -57,7 +57,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
     Sports: '/sports',
     Crypto: '/crypto',
     // 'Tech': '/tech',
-    'Word Mentions': '/mentions',
+    'Mentions': '/mentions',
     // Economy: '/economy',
     Election: '/election',
     // 'All Market': '/all-market',
@@ -113,7 +113,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
         <div className="hidden lg:block py03">          
           <div className="bg-[#1B1B1B]">
             <div className="">
-              <div className="flex space-x-1 py-3 noscroll">
+              <div className="flex space-x-1 py-3 noscroll no-scrollbar overflow-x-auto">
                 <Button
                   variant={'ghost'}
                   size="sm"

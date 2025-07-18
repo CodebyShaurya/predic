@@ -44,9 +44,9 @@ export default function SportsPage() {
       awayTeam: match.awayTeam,
       amount: match.money,
       tradeSuggestions: [
-        `Buy ${match.homeTeam.name} at ${match.homeTeam.bid}`,
-        `Hedge with ${match.awayTeam.name} spread`,
-        'Consider live betting options'
+        `+7`,
+        `+24`,
+        '+1'
       ]
     };
     setSelectedMatch(gameData);

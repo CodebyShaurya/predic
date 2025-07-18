@@ -92,6 +92,178 @@ const electionData = {
         // { name: "Die Linke", logo: "🟣", chance: 8, color: "bg-purple-600" },
         // { name: "Greens", logo: "🟢", chance: 9, color: "bg-green-600" }
       ]
+    },
+     {
+      id: 1,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Democratic Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 52, color: "bg-blue-500" },
+        { name: "Republican Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 45, color: "bg-red-500" },
+        { name: "Green Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 2, color: "bg-green-500" },
+        { name: "Libertarian Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 1, color: "bg-yellow-500" }
+      ]
+    },
+    {
+      id: 2,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Conservative Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 38, color: "bg-blue-600" },
+        { name: "Labour Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 42, color: "bg-red-600" },
+        { name: "Liberal Democrats", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        { name: "SNP", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 5, color: "bg-yellow-600" },
+        // { name: "Green Party", logo: "🟢", chance: 2, color: "bg-green-500" },
+        // { name: "Reform UK", logo: "⚫", chance: 1, color: "bg-gray-600" }
+      ]
+    },
+    {
+      id: 3,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "LDP (Liberal Democratic…)", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 28, color: "bg-gray-700" },
+        { name: "SPD", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 25, color: "bg-red-600" },
+        { name: "AfD", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 18, color: "bg-blue-700" },
+        { name: "FDP", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        // { name: "Die Linke", logo: "🟣", chance: 8, color: "bg-purple-600" },
+        // { name: "Greens", logo: "🟢", chance: 9, color: "bg-green-600" }
+      ]
+    },
+     {
+      id: 1,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Democratic Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 52, color: "bg-blue-500" },
+        { name: "Republican Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 45, color: "bg-red-500" },
+        { name: "Green Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 2, color: "bg-green-500" },
+        { name: "Libertarian Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 1, color: "bg-yellow-500" }
+      ]
+    },
+    {
+      id: 2,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Conservative Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 38, color: "bg-blue-600" },
+        { name: "Labour Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 42, color: "bg-red-600" },
+        { name: "Liberal Democrats", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        { name: "SNP", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 5, color: "bg-yellow-600" },
+        // { name: "Green Party", logo: "🟢", chance: 2, color: "bg-green-500" },
+        // { name: "Reform UK", logo: "⚫", chance: 1, color: "bg-gray-600" }
+      ]
+    },
+    {
+      id: 3,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "LDP (Liberal Democratic…)", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 28, color: "bg-gray-700" },
+        { name: "SPD", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 25, color: "bg-red-600" },
+        { name: "AfD", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 18, color: "bg-blue-700" },
+        { name: "FDP", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        // { name: "Die Linke", logo: "🟣", chance: 8, color: "bg-purple-600" },
+        // { name: "Greens", logo: "🟢", chance: 9, color: "bg-green-600" }
+      ]
+    },
+     {
+      id: 1,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Democratic Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 52, color: "bg-blue-500" },
+        { name: "Republican Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 45, color: "bg-red-500" },
+        { name: "Green Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 2, color: "bg-green-500" },
+        { name: "Libertarian Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 1, color: "bg-yellow-500" }
+      ]
+    },
+    {
+      id: 2,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Conservative Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 38, color: "bg-blue-600" },
+        { name: "Labour Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 42, color: "bg-red-600" },
+        { name: "Liberal Democrats", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        { name: "SNP", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 5, color: "bg-yellow-600" },
+        // { name: "Green Party", logo: "🟢", chance: 2, color: "bg-green-500" },
+        // { name: "Reform UK", logo: "⚫", chance: 1, color: "bg-gray-600" }
+      ]
+    },
+    {
+      id: 3,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "LDP (Liberal Democratic…)", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 28, color: "bg-gray-700" },
+        { name: "SPD", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 25, color: "bg-red-600" },
+        { name: "AfD", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 18, color: "bg-blue-700" },
+        { name: "FDP", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        // { name: "Die Linke", logo: "🟣", chance: 8, color: "bg-purple-600" },
+        // { name: "Greens", logo: "🟢", chance: 9, color: "bg-green-600" }
+      ]
+    },
+     {
+      id: 1,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Democratic Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 52, color: "bg-blue-500" },
+        { name: "Republican Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 45, color: "bg-red-500" },
+        { name: "Green Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 2, color: "bg-green-500" },
+        { name: "Libertarian Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 1, color: "bg-yellow-500" }
+      ]
+    },
+    {
+      id: 2,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "Conservative Party", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 38, color: "bg-blue-600" },
+        { name: "Labour Party", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 42, color: "bg-red-600" },
+        { name: "Liberal Democrats", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        { name: "SNP", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 5, color: "bg-yellow-600" },
+        // { name: "Green Party", logo: "🟢", chance: 2, color: "bg-green-500" },
+        // { name: "Reform UK", logo: "⚫", chance: 1, color: "bg-gray-600" }
+      ]
+    },
+    {
+      id: 3,
+      date: "15",
+      month: "july",
+      country: "Japan",
+      flag: "House of counceloor",
+      parties: [
+        { name: "LDP (Liberal Democratic…)", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 28, color: "bg-gray-700" },
+        { name: "SPD", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 25, color: "bg-red-600" },
+        { name: "AfD", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png", chance: 18, color: "bg-blue-700" },
+        { name: "FDP", logo: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", chance: 12, color: "bg-yellow-500" },
+        // { name: "Die Linke", logo: "🟣", chance: 8, color: "bg-purple-600" },
+        // { name: "Greens", logo: "🟢", chance: 9, color: "bg-green-600" }
+      ]
     }
   ]
 };
