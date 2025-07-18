@@ -58,7 +58,7 @@ export default function MentionsPage() {
       />
       <SearchFilter breakingNews={siteData.breakingNews} />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto max-w-7xl mx-auto md:px-0 px-2  py-8">
         <div className="mb-6">
           <h1 className="text-white text-2xl font-bold mb-2">Word Mentions</h1>
           <p className="text-gray-400">Track mentions and trade on their impact</p>

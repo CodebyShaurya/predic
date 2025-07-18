@@ -142,8 +142,8 @@ export default function ElectionPage() {
     <div className="min-h-screen bg-[#101010]">
       <Navbar data={siteData.navbar} />
             <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} />
-            
-      <div className=" pr-4 sm:pr-6 lg:pr-8 py-8">
+
+      <div className="max-w-7xl mx-auto md:px-0 px-2 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar */}
           <div className="lg:col-span-1">
@@ -177,26 +177,26 @@ export default function ElectionPage() {
               {electionData.elections.map((election) => (
                 <div key={election.id} className="bg-[#1E1E1E] border border-gray-700 rounded-lg p-4">
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
                       {/* <Calendar className="h-5 w-5 text-gray-400" /> */}
                       <div className="flex flex-col items-center space-x-2 min-w-0 flex-shrink-0">
                           {/* <Calendar className="h-4 w-4 text-gray-400" /> */}
-                          <span className="text-white text-3xl font-semibold whitespace-nowrap">{election.date} </span>
-                          <span className="text-gray-400 text-sm whitespace-nowrap">{election.month}</span>
+                          <span className="text-white text-xl font-semibold whitespace-nowrap">{election.date} </span>
+                          <span className="text-gray-400 text-xs whitespace-nowrap">{election.month}</span>
                         </div>
 
                         <div className="flex flex-col  space-x-2 min-w-0 flex-shrink-0">
                           {/* <Calendar className="h-4 w-4 text-gray-400" /> */}
-                          <span className="text-white ml-1 text-2xl whitespace-nowrap">{election.country} </span>
-                          <span className="text-gray-400 text-sm whitespace-nowrap">{election.flag}</span>
+                          <span className="text-white ml-1 text-xl whitespace-nowrap">{election.country} </span>
+                          <span className="text-gray-400 text-xs whitespace-nowrap">{election.flag}</span>
                         </div>
                     </div>
                     <span className="text-4xl"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" alt="flag" className="w-12 rounded-lg h-10" /></span>
                   </div>
 
                   {/* Parties */}
-                  <div className="h-full overflow-y-auto space-y-3 hide-scrollbar">
+                  <div className="h-full overflow-y-auto space-y-2 hide-scrollbar">
                     {election.parties.map((party, index) => (
                       <div key={index} className="relative flex items-center  px-2 py-1 bg-transparent overflow-hidden">
                         {/* Blue bar background */}
@@ -211,7 +211,7 @@ export default function ElectionPage() {
                           </span>
                         </div>
                         <div className="flex items-center relative z-10">
-                          <span className="text-2xl"><img src={party.logo} className="w-10 rounded-lg" /></span>
+                          <span className="text-2xl"><img src={party.logo} className="w-7 rounded-lg" /></span>
                           <span className="text-white ml-1 ">{party.name}</span>
                         </div>
                         

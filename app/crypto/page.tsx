@@ -58,9 +58,9 @@ export default function CryptoPage() {
         currentTab="Crypto" 
       />
       {/* <SearchFilter breakingNews={siteData.breakingNews} /> */}
-      
-      <main className="  py-8">
-        <div className="mb-6 px-4 sm:px-6 lg:px-8">
+
+      <main className="max-w-7xl mx-auto py-8">
+        <div className="mb-6 px-2 lg:px-0">
           <h1 className="text-white text-2xl font-bold mb-2">Crypto Predictions</h1>
           <p className="text-gray-400">Trade on cryptocurrency price movements and market events</p>
         </div>

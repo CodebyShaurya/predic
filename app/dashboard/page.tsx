@@ -177,7 +177,7 @@ export default function DashboardPage() {
       {dashboardData.elections.map((election) => (
         <div key={election.id} className="bg-[#1E1E1E] border border-gray-700 rounded-lg p-4">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-4">
               {/* <Calendar className="h-5 w-5 text-gray-400" /> */}
               <div className="flex flex-col items-center space-x-2 min-w-0 flex-shrink-0">
@@ -196,7 +196,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Parties */}
-          <div className="h-full overflow-y-auto space-y-3 hide-scrollbar">
+          <div className="h-full overflow-y-auto space-y-2 hide-scrollbar">
             {election.parties.map((party, index) => (
               <div key={index} className="relative flex items-center  px-2 py-1 bg-transparent overflow-hidden">
                 {/* Blue bar background */}
@@ -211,7 +211,7 @@ export default function DashboardPage() {
                   </span>
                 </div>
                 <div className="flex items-center relative z-10">
-                  <span className="text-2xl"><img src={party.logo} className="w-10 rounded-lg" /></span>
+                  <span className="text-2xl"><img src={party.logo} className="w-8 rounded-lg" /></span>
                   <span className="text-white ml-1 ">{party.name}</span>
                 </div>
                 
@@ -287,7 +287,7 @@ export default function DashboardPage() {
         {dashboardData.elections.slice(0, 2).map((election) => (
         <div key={election.id} className="bg-[#101010] border border-gray-700 rounded-lg p-4">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-4">
               {/* <Calendar className="h-5 w-5 text-gray-400" /> */}
               <div className="flex flex-col items-center space-x-2 min-w-0 flex-shrink-0">
@@ -321,7 +321,7 @@ export default function DashboardPage() {
                   </span>
                 </div>
                 <div className="flex items-center relative z-10">
-                  <span className="text-2xl"><img src={party.logo} className="w-10 rounded-lg" /></span>
+                  <span className="text-2xl"><img src={party.logo} className="w-8 rounded-lg" /></span>
                   <span className="text-white ml-1 ">{party.name}</span>
                 </div>
                 
@@ -610,7 +610,7 @@ return (
         <Navbar data={siteData.navbar} />
         <TabNavigation tabs={dashboardData.tabs} moreDropdown={dashboardData.moreDropdown} currentTab={activeSection} />
 
-      <div className="pr-2 pl-2 sm:pr-6 sm:pl-4 lg:pr-8 lg:pl-8">
+      <div className="max-w-7xl mx-auto mt-4 pr-2 pl-2 sm:pr-6 sm:pl-4 lg:pr-8 lg:pl-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar */}
           <div className="lg:col-span-1">

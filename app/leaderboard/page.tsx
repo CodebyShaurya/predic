@@ -80,7 +80,7 @@ export default function LeaderboardPage() {
     <div className="min-h-screen bg-[#101010]">
        <Navbar data={siteData.navbar} />
                   <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} />
-      <div className=" px-4 sm:px-6 lg:px-8 py-8">
+      <div className=" max-w-7xl mx-auto py-8 px-2 lg:px-0">
         {/* Header */}
         <div className="mb-8 flex flex-col items-center justify-center">
           <h1 className="text-white text-3xl font-semibold mb-6">Leaderboard</h1>
@@ -113,14 +113,14 @@ export default function LeaderboardPage() {
 
 
         {/* Table Toggle */}
-        <div className="flex space-x-2 mb-6 sm:hidden block">
+        <div className="flex space-x-2 mb-6 lg:hidden block justify-center">
           <Button
             variant={activeTable === "Volume" ? "default" : "ghost"}
             onClick={() => setActiveTable("Volume")}
             className={`${
               activeTable === "Volume"
-                ? 'bg-purple-600 text-white hover:bg-purple-700'
-                : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                ? 'bg-gradient-to-r from-[#8A66FC] to-[#5A34DF] text-white '
+                    : 'text-gray-300 bg-[#232323] hover:text-white hover:bg-[#232323]'
             }`}
           >
             Volume
@@ -130,8 +130,8 @@ export default function LeaderboardPage() {
             onClick={() => setActiveTable("Profit")}
             className={`${
               activeTable === "Profit"
-                ? 'bg-purple-600 text-white hover:bg-purple-700'
-                : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                 ? 'bg-gradient-to-r from-[#8A66FC] to-[#5A34DF] text-white '
+                    : 'text-gray-300 bg-[#232323] hover:text-white hover:bg-[#232323]'
             }`}
           >
             Profit

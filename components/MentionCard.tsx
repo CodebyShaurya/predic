@@ -18,14 +18,16 @@ interface MentionCardProps {
 export default function MentionCard({ mention }: MentionCardProps) {
   return (
     <div className="bg-[#1B1B1B] border border-gray-700 rounded-lg p-4 hover:bg-gray-750 transition-colors">
-      <div className="flex items-center space-x-4">
+      <div className="sm:flex items-center justify-between space-x-4">
         {/* Date */}
+        <div className='sm:flex items-center space-x-4 mb-2 sm:mb-0'>
         <div className="flex flex-col items-center space-x-2 min-w-0 flex-shrink-0">
           {/* <Calendar className="h-4 w-4 text-gray-400" /> */}
           <span className="text-white text-3xl whitespace-nowrap">{mention.date} </span>
           <span className="text-gray-400 text-sm whitespace-nowrap">{mention.month}</span>
         </div>
-
+        <div className="flex items-center space-x-2"></div>
+        <div className='flex items-center space-x-2'>
         {/* Photo */}
         <div className="flex-shrink-0">
           <img
@@ -37,7 +39,7 @@ export default function MentionCard({ mention }: MentionCardProps) {
 
         {/* News and Dialog */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-white font-semibold text-xl mb-2 line-clamp-1">
+          <h3 className="text-white font-semibold lg:text-xl mb-2 line-clamp-1">
             {mention.news}
           </h3>
           <div className="flex items-center space-x-2 mb-1">
@@ -53,10 +55,12 @@ export default function MentionCard({ mention }: MentionCardProps) {
             </p>
           </div>
         </div>
+        </div>
+        </div>
 
         {/* Topic Tags and Trade Button */}
-        <div className="flex flex-row items-end space-x-2 flex-shrink-0 items-center">
-          <div className="flex space-x-2 mb-1">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:space-y-4 space-y-0 space-x-2 flex-shrink-0 items-center">
+          <div className="flex  space-x-2 mb-1">
             {/* Placeholder Topic Tags */}
             <span className="bg-[#1B1B1B] border border-gray-700 rounded-md px-2 py-0.5 text-xs text-gray-300 whitespace-nowrap">
               Crypto

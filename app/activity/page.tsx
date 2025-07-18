@@ -106,7 +106,7 @@ return (
   <div className="min-h-screen bg-[#101010]">
     <Navbar data={siteData.navbar} />
     <TabNavigation tabs={siteData.tabs} moreDropdown={siteData.moreDropdown} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-2 lg:px-0 py-8">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
@@ -174,12 +174,12 @@ return (
                 
 
                 {/* Matchup with team logos */}
-                <div className="grid grid-cols-1 items-center space-y-2 flex-shrink-0">
+                <div className="grid grid-cols-1 items-center space-y-2 ">
                   {/* <span className="text-2xl">{activity.teamLogos[0]}</span> */}
                   <span className="text-white text-xl font-semibold">{activity.matchup}</span>
                   <div className="flex min-w-0 ">
                     <img src="/Ellipse 3599.png" alt="user" className="w-6 h-6 rounded-full" />
-                  <p className="text-gray-300 text-sm leading-relaxed ml-1">
+                  <p className="text-gray-300 text-sm ml-1">
                     {activity.description}
                   </p>
                 </div>
