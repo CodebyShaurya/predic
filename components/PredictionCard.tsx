@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Gift, Bookmark, TrendingUp, ArrowLeftRight , ChevronsUp} from 'lucide-react';
+import { Gift, Bookmark, Share2, ArrowLeftRight , ChevronsUp} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -76,24 +76,32 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
         </CardContent>
 
         <CardFooter className="flex justify-between items-center pt-3">
-          <span className="text-gray-200 text-lg font-medium flex items-center space-x-2">{prediction.volume} Vol    </span>
+          <span className="text-gray-200 text-md font-medium flex items-center space-x-2">{prediction.volume} Vol    </span>
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
               size="sm"
-              className="h-6 w-6 p-0 text-gray-400 hover:text-white"
+              className="h-5 w-5 p-0 text-gray-400 hover:text-white"
             >
-              <Gift className="h-6 w-6" />
+              <Gift className="h-5 w-5" />
             </Button>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setBookmarked(!bookmarked)}
-              className={`h-6 w-6 p-0 ${
+              className={`h-5 w-5 p-0 ${
                 bookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-white'
               }`}
             >
-              <Bookmark className="h-6 w-6" fill={bookmarked ? 'currentColor' : 'none'} />
+              <Bookmark className="h-5 w-5" fill={bookmarked ? 'currentColor' : 'none'} />
+            </Button>
+             <Button
+              variant="ghost"
+              size="sm"
+              // onClick={() => setBookmarked(!bookmarked)}
+              className={`h-5 w-5 p-0 text-gray-400`}
+            >
+              <Share2 className="h-5 w-5"  />
             </Button>
           </div>
         </CardFooter>
@@ -164,25 +172,33 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
       </CardContent>
 
       <CardFooter className="flex justify-between items-center pt-3">
-        <span className="text-gray-200 text-lg font-medium flex items-center space-x-2">{prediction.volume} Vol <ArrowLeftRight className='ml-2 h-6 w-6' />    </span>
+        <span className="text-gray-200 text-md font-medium flex items-center space-x-2">{prediction.volume} Vol <ArrowLeftRight className='ml-2 h-6 w-6' />    </span>
         <div className="flex items-center space-x-2">
           <Button
             variant="ghost"
             size="sm"
-            className="h-6 w-6 p-0 text-gray-400 hover:text-white"
+            className="h-5 w-5 p-0 text-gray-400 hover:text-white"
           >
-            <Gift className="h-6 w-6" />
+            <Gift className="h-5 w-5" />
           </Button>
           <Button
             variant="ghost"
             size="sm"
             onClick={() => setBookmarked(!bookmarked)}
-            className={`h-6 w-6 p-0 ${
+            className={`h-5 w-5 p-0 ${
               bookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-white'
             }`}
           >
-            <Bookmark className="h-6 w-6" fill={bookmarked ? 'currentColor' : 'none'} />
+            <Bookmark className="h-5 w-5" fill={bookmarked ? 'currentColor' : 'none'} />
           </Button>
+           <Button
+              variant="ghost"
+              size="sm"
+              // onClick={() => setBookmarked(!bookmarked)}
+              className={`h-5 w-5 p-0 text-gray-400`}
+            >
+              <Share2 className="h-5 w-5"  />
+            </Button>
         </div>
       </CardFooter>
     </Card>
