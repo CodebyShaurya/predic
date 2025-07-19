@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import TabNavigation from '@/components/TabNavigation';
 import SearchFilter from '@/components/SearchFilter';
 import PredictionCard from '@/components/PredictionCard';
+import Footer from '@/components/Footer';
+
 
 export default function Home() {
   const [siteData, setSiteData] = useState<any>(null);
@@ -165,7 +167,9 @@ export default function Home() {
           ))}
         </div>
         </div>
+
       </main>
+      <Footer/>
     </div>
   );
 }
