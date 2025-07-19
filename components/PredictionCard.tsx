@@ -154,7 +154,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
         </div>
       </CardHeader>
       
-      <CardContent className="py-2  ">
+      <CardContent className="py-2  mt-1">
         <div className="flex space-x-2">
           <Button
             className="flex-1 bg-green-200 bg-opacity-10 hover:bg-green-700 text-md text-green-400 h-12"
