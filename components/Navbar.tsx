@@ -118,7 +118,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                   <a href="/crypto">Terms of Use</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
-                  <label className="inline-flex items-center cursor-pointer">
+                  <label className="inline-flex  cursor-pointer">
                     <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dark Mode</span>
                     <input type="checkbox" value="" className="sr-only peer" />
                     

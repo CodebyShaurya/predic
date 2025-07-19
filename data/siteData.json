@@ -129,17 +129,21 @@
   "tabs": [
     "Trending",
     "News",
-    "Middle East",
     "Politics",
+    "Middle East",
+    
     "Sports",
     "Crypto",
     "Tech",
-    "World",
-    "Trump",
-    "Mentions",
-    "Economy",
     "Culture",
-    "Election"
+    "World",
+    "Economy",
+    "Trump",
+    
+    "Election",
+    "Mentions"
+    
+    
   ],
   "moreDropdown": [
     "Entertainment",
@@ -149,12 +153,28 @@
     "Business"
   ],
   "breakingNews": [
-    "Trump Epstein",
-    "Trump vs Elon",
-    "Educational Trade war",
-    "AI Regulation",
-    "Climate Summit"
-  ],
+  "Trump Presidency",
+  "Jerome Powell",
+  "Syria",
+  "Epstein",
+  "Israel",
+  "AI",
+  "Trade War",
+  "NYC Mayor",
+  "Geopolitics",
+  "Trump vs Elon",
+  "China",
+  "Courts",
+  "Elon Musk",
+  "America Party",
+  "Hurricanes",
+  "Grok",
+  "Iran",
+  "Diddy",
+  "Crypto Prices",
+  "Global Elections",
+  "Ukraine"
+],
   "mentions": [
     {
       "id": 1,
