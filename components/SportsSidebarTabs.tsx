@@ -6,61 +6,35 @@ const tabs = [
 ];
 
 const tabs2 =[
-  {
-    "label": "Premier League",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"
-  },
-  {
-    "label": "Indian Premier League",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png"
-  },
-  {
-    "label": "NBA",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/1200px-National_Basketball_Association_logo.svg.png"
-  },
-  {
-    "label": "La Liga",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/LaLiga_Santander_logo_%28stacked%29.svg/1200px-LaLiga_Santander_logo_%28stacked%29.svg.png"
-  },
-  {
-    "label": "NFL",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/1200px-National_Football_League_logo.svg.png"
-  },
-  {
-    "label": "UEFA Champions League",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UEFA_Europa_League_logo_%282024_version%29.svg/640px-UEFA_Europa_League_logo_%282024_version%29.svg.png"
-  },
-  {
-    "label": "Formula 1",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png"
-  },
-  {
-    "label": "MLB",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Major_League_Baseball_logo.svg/640px-Major_League_Baseball_logo.svg.png"
-  },
-  {
-    "label": "Bundesliga",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png"
-  },
-  {
-    "label": "WWE",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/640px-WWE_Logo.svg.png"
-  },
-  {
-    "label": "UFC",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UFC_Logo.svg/1200px-UFC_Logo.svg.png"
-  },
-
-
-
-]
+  { label: 'MLB', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Major_League_Baseball_logo.svg/640px-Major_League_Baseball_logo.svg.png' },
+  { label: 'WNBA', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fwnba.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'Golf', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fgolf.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'NFL', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/1200px-National_Football_League_logo.svg.png' },
+  { label: 'NBA', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/1200px-National_Basketball_Association_logo.svg.png' },
+  { label: 'EPL', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png' },
+  { label: 'CFB', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fcfb.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'NHL', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/1200px-05_NHL_Shield.svg.png' },
+  { label: 'Football', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fsoccer.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'UCL', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fucl.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'UEL', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UEFA_Europa_League_logo_%282024_version%29.svg/640px-UEFA_Europa_League_logo_%282024_version%29.svg.png' },
+  { label: 'CBB', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fcfb.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'LaLiga', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Flaliga.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'UFC', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UFC_Logo.svg/1200px-UFC_Logo.svg.png' },
+  { label: 'Cricket', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fcricket.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'Tennis', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Ftennis.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'F1', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png' },
+  { label: 'Chess', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fchess.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'Boxing', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fboxing.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'Esports', logo: 'https://polymarket.com/_next/image?url=%2Fimages%2Fsports%2Fesports.png&w=96&q=75&dpl=dpl_WRGwBgPCzGrZNVuBgN4sBNvFtmha' },
+  { label: 'Others', logo: 'https://static.thenounproject.com/png/4513746-200.png' },
+];
 
 const SportsSidebarTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState('live');
   const [activeTab2, setActiveTab2] = useState('Team 1');
 
   return (
-    <div className="bg-[#101010] lg:border-r  border-gray-700  p-4 h-fit">
+    <div className="bg-[#101010] lg:border-r  border-gray-700  p-4 h-fit overflow-y-auto max-h-[calc(100vh-250px)] no-scrollbar">
       <div className="space-y-4 border-b border-gray-700 pb-5">
         {tabs.map((tab) => (
           <button

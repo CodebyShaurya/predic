@@ -33,7 +33,7 @@ export default function NBAMatches({ nbaMatches, onMatchSelect }: NBAMatchesProp
   };
 
   return (
-    <div className="bg-[#101010]">
+    <div className="bg-[#101010]  overflow-y-auto max-h-[calc(100vh-250px)] no-scrollbar">
       <h1 className="text-[#E0E0E0] font-semibold text-3xl mb-4">Starting Soon</h1>
       <h1 className="text-[#E0E0E0] font-semibold text-md mb-2">July 17, 2025</h1>
       <h3 className="text-[#E0E0E0] font-semibold text-md mb-4">NBA</h3>
@@ -48,7 +48,7 @@ export default function NBAMatches({ nbaMatches, onMatchSelect }: NBAMatchesProp
                 : ' bg-[#232323]'
             }`}
           >
-            <div className="flex justify-between items-center mb-3">
+            <div className="flex justify-between items-center mb-3 ">
               <div className='flex items-center'>
               <span className='bg-[#FFFFFF0A] p-2 rounded-md text-xs'>{match.timer}</span>
               <span className='text-gray-400 text-xs ml-2'>$20m Vol</span>

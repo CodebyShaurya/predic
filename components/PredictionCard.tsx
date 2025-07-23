@@ -59,13 +59,13 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
           </div>
         </CardHeader>
         
-        <CardContent className="pb-2 h-[80px] overflow-x-auto no-scrollbar">
+        <CardContent className=" h-[75px] overflow-x-auto no-scrollbar">
           <div className="space-y-2">
             {prediction.options?.map((option, index) => (
               <div key={index} className="flex items-center justify-between">
                 <span className="text-gray-300 text-sm">{option.name}</span>
                 <div className="flex items-center space-x-2">
-                  <span className="text-white font-medium">{option.percentage}%</span>
+                  <span className="text-white font-medium text-sm">{option.percentage}%</span>
                   <div className="flex space-x-1">
                     <Button
                       size="sm"
@@ -88,33 +88,33 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
           </div>
         </CardContent>
 
-        <CardFooter className="flex justify-between items-center pt-3">
-          <span className="text-gray-200 text-md font-medium flex items-center space-x-2">{prediction.volume} Vol    </span>
+        <CardFooter className="flex justify-between items-center pt-2">
+          <span className="text-gray-200 text-sm font-medium flex items-center space-x-2">{prediction.volume} Vol    </span>
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
               size="sm"
-              className="h-5 w-5 p-0 text-gray-400 hover:text-white"
+              className="h-4 w-4 p-0 text-gray-400 hover:text-white"
             >
-              <Gift className="h-5 w-5" />
+                <Gift className="h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setBookmarked(!bookmarked)}
-              className={`h-5 w-5 p-0 ${
+              className={`h-4 w-4 p-0 ${
                 bookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-white'
               }`}
             >
-              <Bookmark className="h-5 w-5" fill={bookmarked ? 'currentColor' : 'none'} />
+              <Bookmark className="h-4 w-4" fill={bookmarked ? 'currentColor' : 'none'} />
             </Button>
              <Button
               variant="ghost"
               size="sm"
               // onClick={() => setBookmarked(!bookmarked)}
-              className={`h-5 w-5 p-0 text-gray-400`}
+              className={`h-4 w-4  p-0 text-gray-400`}
             >
-              <Share2 className="h-5 w-5"  />
+              <Share2 className="h-4 w-4"  />
             </Button>
           </div>
         </CardFooter>
@@ -245,32 +245,32 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
       </CardContent>
 
       {!buyMode && (
-        <CardFooter className="flex justify-between items-center pt-3">
-          <span className="text-gray-200 text-md font-medium flex items-center space-x-2">{prediction.volume} Vol <ArrowLeftRight className='ml-2 h-6 w-6' /></span>
+        <CardFooter className="flex justify-between items-center pt-2">
+          <span className="text-gray-200 text-sm font-medium flex items-center space-x-2">{prediction.volume} Vol <ArrowLeftRight className='ml-2 h-4 w-4' /></span>
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
               size="sm"
-              className="h-5 w-5 p-0 text-gray-400 hover:text-white"
+              className="h-4 w-4 p-0 text-gray-400 hover:text-white"
             >
-              <Gift className="h-5 w-5" />
+              <Gift className="h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setBookmarked(!bookmarked)}
-              className={`h-5 w-5 p-0 ${
+              className={`h-4 w-4 p-0 ${
                 bookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-white'
               }`}
             >
-              <Bookmark className="h-5 w-5" fill={bookmarked ? 'currentColor' : 'none'} />
+              <Bookmark className="h-4 w-4" fill={bookmarked ? 'currentColor' : 'none'} />
             </Button>
             <Button
               variant="ghost"
               size="sm"
-              className={`h-5 w-5 p-0 text-gray-400`}
+              className={`h-4 w-4 p-0 text-gray-400`}
             >
-              <Share2 className="h-5 w-5" />
+              <Share2 className="h-4 w-4" />
             </Button>
           </div>
         </CardFooter>
