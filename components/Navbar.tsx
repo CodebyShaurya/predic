@@ -92,7 +92,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-[#1B1B1B] border-gray-700 max-h-96 pr-4 pl-2 overflow-y-auto">
+              <DropdownMenuContent className="bg-[#1B1B1B] border-gray-700 max-h-96 pr-4 pl-2 space-y-2 overflow-y-auto w-56">
                 {/* Auth options */}
                 <DropdownMenuItem className="text-gray-300 hover:text-white hover:bg-gray-700">
                   Sign In
@@ -102,24 +102,25 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                 </DropdownMenuItem>
                 <div className="border-b border-gray-700 my-1" />
                 {/* Navigation links */}
-                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
+                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
                   <a href="/election">Election</a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
+                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
                   <a href="/sports">Sports</a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
+                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
                   <a href="/rewards">Rewards</a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
+                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
                   <a href="/crypto">Documentation</a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
+                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
                   <a href="/crypto">Terms of Use</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700">
-                  <label className="inline-flex  cursor-pointer">
-                    <span className=" text-sm font-medium text-gray-900 dark:text-gray-300">Dark Mode</span>
+                  <label className="inline-flex  cursor-pointer w-full justify-between
+                  ">
+                    <span className=" text-md font-medium text-gray-900 dark:text-gray-300">Dark Mode</span>
                     <input type="checkbox" value="" className="sr-only peer" />
                     
                     <div className="ml-3 relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
@@ -127,14 +128,14 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                   </label>
                 </DropdownMenuItem>
                 {/* Existing dynamic tabs, if any */}
-                {allTabs.map((tab) => (
+                {/* {allTabs.map((tab) => (
                   <DropdownMenuItem
                     key={tab}
                     className="text-gray-300 hover:text-white hover:bg-gray-700"
                   >
                     {tab}
                   </DropdownMenuItem>
-                ))}
+                ))} */}
               </DropdownMenuContent>
             </DropdownMenu>
             </div>

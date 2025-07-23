@@ -5,6 +5,7 @@ import { Gift, Bookmark, Share2, ArrowLeftRight , ChevronsUp, ChevronsDown} from
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { useRouter } from 'next/navigation';
 
 interface PredictionOption {
   name: string;
@@ -26,6 +27,7 @@ interface PredictionCardProps {
 }
 
 export default function PredictionCard({ prediction }: PredictionCardProps) {
+  const router = useRouter();
   const [bookmarked, setBookmarked] = useState(false);
   const [buyMode, setBuyMode] = useState(false);
   const [buyType, setBuyType] = useState<'yes' | 'no' | null>(null);
@@ -51,7 +53,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
               alt={prediction.title}
               className="w-9 h-9 rounded-lg object-cover"
             />
-            <div className="flex-1 mt-1">
+            <div className="flex-1 mt-1 cursor-pointer" onClick={() => router.push(`/prediction`)}>
               <h3 className="text-white font-semibold text-sm leading-tight">
                 {prediction.title}
               </h3>
@@ -62,7 +64,7 @@ export default function PredictionCard({ prediction }: PredictionCardProps) {
         <CardContent className=" h-[75px] overflow-x-auto no-scrollbar">
           <div className="space-y-2">
             {prediction.options?.map((option, index) => (
-              <div key={index} className="flex items-center justify-between">
+              <div key={index} className="flex items-center justify-between cursor-pointer" onClick={() => router.push(`/prediction`)}>
                 <span className="text-gray-300 text-sm">{option.name}</span>
                 <div className="flex items-center space-x-2">
                   <span className="text-white font-medium text-sm">{option.percentage}%</span>

@@ -32,9 +32,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
 
   // SVG icons for More dropdown options
   const moreOptions = [
-    { label: 'All Market', icon: (
-      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/><path d="M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-    ) },
+  
     { label: 'Activity', icon: (
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="inline-block mr-2 align-text-bottom"><path d="M3 12h3l3 8 4-16 3 8h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
     ) },
@@ -149,7 +147,7 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
                       More <ChevronDown className="ml-1 h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="border-gray-700">
+                  <DropdownMenuContent className="border-gray-700 pl-2 pr-4 py-2 space-y-2">
                     {moreOptions.map((item) => (
                       <DropdownMenuItem
                         key={item.label}
