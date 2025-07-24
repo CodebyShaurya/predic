@@ -147,12 +147,12 @@ export default function TabNavigation({ tabs, moreDropdown, currentTab }: TabNav
                       More <ChevronDown className="ml-1 h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="border-gray-700 pl-2 pr-4 py-2 space-y-2">
+                  <DropdownMenuContent className="border-gray-700 pl-2 py-4 pr-5 space-y-3">
                     {moreOptions.map((item) => (
                       <DropdownMenuItem
                         key={item.label}
                         onClick={() => handleTabClick(item.label)}
-                        className="text-gray-300 flex items-center"
+                        className="text-gray-300 flex items-center pr-4"
                       >
                         {item.icon}{item.label}
                       </DropdownMenuItem>
