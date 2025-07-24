@@ -92,7 +92,7 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-[#1B1B1B] border-gray-700 max-h-96 pr-4 pl-2 space-y-2 overflow-y-auto w-56">
+              <DropdownMenuContent className="bg-[#1B1B1B] border-gray-700 max-h-[520px] pr-4 pl-2 space-y-2 overflow-y-auto w-56">
                 {/* Auth options */}
                 <DropdownMenuItem className="text-gray-300 hover:text-white hover:bg-gray-700">
                   Sign In
