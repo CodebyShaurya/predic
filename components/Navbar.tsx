@@ -112,6 +112,9 @@ export default function Navbar({ data, tabs = [], moreDropdown = [] }: NavbarPro
                   <a href="/rewards">Rewards</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
+                  <a href="/">Pricing</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">
                   <a href="/crypto">Documentation</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-gray-300 hover:text-white hover:bg-gray-700 py-2">

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row w-full justify-between max-w-6xl mx-auto">
         {/* Left side - Links */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-4 sm:mb-0">
-          <div className="font-light text-white text-xs">Predictas© 2025</div>
+          <div className="font-light text-white text-xs">Predictas LLC© 2025</div>
           <div className="flex flex-wrap gap-4 sm:gap-6 font-light text-xs">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy
